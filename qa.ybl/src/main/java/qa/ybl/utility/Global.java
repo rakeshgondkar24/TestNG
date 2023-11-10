@@ -10,7 +10,16 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.time.Duration;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.Set;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.apache.poi.xssf.usermodel.*;
 import org.apache.poi.hssf.usermodel.*;
@@ -74,6 +83,45 @@ public class Global {
 			FileOutputStream fos = new FileOutputStream(filepath);
 			workbook.write(fos);
 			fos.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public String Alert(WebDriver driver) {
+		String message= null;
+		try {
+			System.out.println("Inside the Alert Method");
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			driver.switchTo().defaultContent();
+			Alert al = wait.until(ExpectedConditions.alertIsPresent());
+			driver.switchTo().alert();
+			message = driver.switchTo().alert().getText();
+			al.accept();
+			System.out.println("Alert message is: "+message);
+			driver.close();
+		}catch(Exception e) {
+			System.out.println("Inside the Alert Method Exception");
+			e.printStackTrace();
+		}
+		return message;
+	}
+	
+	public void HandleWindow(WebDriver driver) {
+		
+		try {
+			Robot r = new Robot();
+			String Parent_window = driver.getWindowHandle();
+			Set<String> New_window = driver.getWindowHandles();
+			Iterator<String> i = New_window.iterator();
+			while(i.hasNext()) {
+				String Child_window = i.next();
+				if(!Parent_window.equalsIgnoreCase(Child_window)) {
+					driver.switchTo().window(Child_window);
+					r.keyPress(KeyEvent.VK_ENTER);
+				}
+			}
+			driver.close();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

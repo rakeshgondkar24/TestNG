@@ -1,6 +1,7 @@
 package qa.ybl.pages;
 
 import qa.ybl.base.*;
+import qa.ybl.utility.Global;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -15,6 +16,8 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends Base{
 
+	public Global global;
+	
 	public static WebDriverWait wait;
 
 	@FindBy(xpath = "//*[@id='txtLogin']")
@@ -142,8 +145,12 @@ public class LoginPage extends Base{
 				String expected="MainNavigation";
 				if(title.equalsIgnoreCase(expected)) {
 					title = expected;
-				}else {
+				}else if(Apperror.isDisplayed()){
 					title = Apperror.getText();
+				}else {
+					driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+					global = new Global();
+					title = global.Alert(driver);
 				}
 			}catch(Exception e) {
 				e.printStackTrace();
@@ -157,13 +164,13 @@ public class LoginPage extends Base{
 	
 	public void Teardown() {
 		try {
-			driver.switchTo().defaultContent();
-			wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']")));
-			//driver.switchTo().frame(Frame);
-			Searchbox.click();
-			Searchbox.sendKeys("GNLO");
-			Gobutton.click();
+				driver.switchTo().defaultContent();
+				wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']")));
+				//driver.switchTo().frame(Frame);
+				Searchbox.click();
+				Searchbox.sendKeys("GNLO");
+				Gobutton.click();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

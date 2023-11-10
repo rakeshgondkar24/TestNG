@@ -13,8 +13,9 @@ import java.util.Arrays;
 
 public class TestLogin extends Base{
 	public static LoginPage login;
-	public static Global global;
-	public static String datafile = "E:\\Rakesh\\Automation\\New folder\\Automation\\YBL\\Practice\\Data\\Login.xlsx";
+	public Global global;
+	public String datafile = prop.getProperty("datafilepath");
+	public String sheetname = prop.getProperty("sheetname");
 	public static String Pdestfile = "E:\\Rakesh\\Automation";
     public static String Fdestfile = "E:\\Rakesh\\Automation";	
 	public TestLogin() throws Exception{
@@ -24,7 +25,7 @@ public class TestLogin extends Base{
 	@DataProvider
 	public Object[][] logindetails(){
 		global = new Global();
-		Object[][] data = global.Getdata(datafile, "LoginDetails");
+		Object[][] data = global.Getdata(datafile, sheetname);
 		System.out.println(Arrays.deepToString(data));
 		return data;
 	}
@@ -120,18 +121,20 @@ public class TestLogin extends Base{
 	}
 	
 	@Test(priority=5, dataProvider="logindetails")
-	public void Login_to_app(String TSID,String Username,String Password,String Captcha,String Result) {
+	public void Login_to_app(String TSID,String Description,String Username,String Password,String Captcha,
+			String Expected,String Result) {
 		try {
 			login = new LoginPage();
 			int rowValue = Integer.valueOf(TSID);
 			System.out.println(rowValue);
 			String actual = login.HomePage(Username, Password, Captcha);
-			String expected = "MainNavigation";
-			if(actual.equalsIgnoreCase(expected)) {
+			String expected = Expected;
+			System.out.println("Expected result is: "+Expected);
+			if(actual.contains(expected)) {
 				try {
 					global = new Global();
 					global.TakeScreenShot(driver, "Pdestfile", "HomePage");
-					global.Writeresult(datafile, "LoginDetails", "PASS"+" "+actual, rowValue);
+					global.Writeresult(datafile, sheetname, "PASS"+" "+actual, rowValue);
 				}catch(Exception e) {
 					e.printStackTrace();
 					System.out.println("*****-----UNABLE TO TAKE SNAPSHOT IN LoginPage()-----*****");
@@ -143,12 +146,13 @@ public class TestLogin extends Base{
 				try {
 					global = new Global();
 					global.TakeScreenShot(driver, "Fdestfile", "HomePage");
-					global.Writeresult(datafile, "LoginDetails", "FAIL"+" "+actual, rowValue);
+					global.Writeresult(datafile, sheetname, "FAIL"+" "+actual, rowValue);
 				}catch(Exception e) {
 					e.printStackTrace();
 					System.out.println("*****-----UNABLE TO TAKE SNAPSHOT IN LoginPage()-----*****");
 				}
 				System.out.println("*********************Actual Title of the Home is: "+actual.toUpperCase()+"*********************");
+				driver.close();
 				Assert.assertTrue(false);
 			}
 		}catch(Exception e) {

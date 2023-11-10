@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
@@ -18,10 +21,15 @@ public class Base {
 	public static Properties prop;
 	
 	public Base() throws Exception{
-		prop = new Properties();
-		String File = "E:\\Rakesh\\Automation\\New folder\\Automation\\YBL\\Practice\\20101\\qa.ybl\\src\\main\\java\\qa\\ybl\\property\\config.properties";
-		FileInputStream file = new FileInputStream(File);
-		prop.load(file);
+		try {
+			prop = new Properties();
+			String File = "E:\\Rakesh\\Automation\\New folder\\Automation\\YBL\\Practice\\20101\\qa.ybl\\src\\main\\java\\qa\\ybl\\property\\config.properties";
+			FileInputStream file = new FileInputStream(File);
+			prop.load(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 	}
 	
 	public void Initialization() throws AWTException {

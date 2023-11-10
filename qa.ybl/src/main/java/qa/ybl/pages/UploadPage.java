@@ -4,6 +4,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import qa.ybl.base.*;
 import qa.ybl.pages.*;
+import qa.ybl.utility.Global;
+
 import org.openqa.selenium.support.FindBy;
 
 import java.time.Duration;
@@ -15,11 +17,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 
 public class UploadPage extends Base{
-	public static HomePage home;
-	public static LoginPage login;
+	public Global global;
+	public  HomePage home;
+	public  LoginPage login;
 	public String frame1 = "//*[@id='frame1']";
 	public String frame2 = "//*[@id='IFRAME1']";
-	public static WebDriverWait wait;
+	public  WebDriverWait wait;
 	
 	@FindBy(xpath = "//*[@id='IFRAME1']")
 	WebElement Frame;
@@ -69,7 +72,12 @@ public class UploadPage extends Base{
 				try {
 					driver.switchTo().defaultContent();
 					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame2)));
-					resultmessage = Uploadresult.getText();
+					if (Uploadresult.isDisplayed()) {
+						resultmessage = Uploadresult.getText();
+					}else {
+						global = new Global();
+						resultmessage = global.Alert(driver);
+					}
 				}catch(Exception e) {
 					e.printStackTrace();
 					System.out.println("~~~~~WHEN READING THE RESULT MESSAGE~~~~~");
@@ -89,7 +97,7 @@ public class UploadPage extends Base{
 		String result = null;
 		try {
 			login = new LoginPage();
-			login.HomePage(Username, Password,Captcha);
+			result = login.HomePage(Username, Password,Captcha);
 			try {
 				driver.switchTo().defaultContent();
 				wait = new WebDriverWait(driver, Duration.ofSeconds(20));

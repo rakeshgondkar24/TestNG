@@ -14,6 +14,7 @@ import java.time.Duration;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
@@ -92,17 +93,29 @@ public class Global {
 		String message= null;
 		try {
 			System.out.println("Inside the Alert Method");
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-			driver.switchTo().defaultContent();
-			Alert al = wait.until(ExpectedConditions.alertIsPresent());
-			driver.switchTo().alert();
-			message = driver.switchTo().alert().getText();
-			al.accept();
-			System.out.println("Alert message is: "+message);
-			driver.close();
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//			driver.switchTo().defaultContent();
+//			Alert al = wait.until(ExpectedConditions.alertIsPresent());
+//			driver.switchTo().alert();
+//			message = driver.switchTo().alert().getText();
+//			al.accept();
+//			System.out.println("Alert message is: "+message);
+//			driver.close();
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}catch(Exception e) {
 			System.out.println("Inside the Alert Method Exception");
-			e.printStackTrace();
+			try {
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+				driver.switchTo().defaultContent();
+				Alert al = wait.until(ExpectedConditions.alertIsPresent());
+				driver.switchTo().alert();
+				message = driver.switchTo().alert().getText();
+				al.accept();
+				System.out.println("Alert message is: "+message);
+				driver.close();
+			}catch(Exception f) {
+				f.printStackTrace();
+			}
 		}
 		return message;
 	}

@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="qa.ybl.testcases.TestLogin">
+      <class name="qa.ybl.testcases.TestUpload">
         <methods>
-          <include name="setup"/>
-          <include name="Login_to_app" invocation-numbers="1 2 3 4"/>
+          <include name="Teardown"/>
+          <include name="Upload_File"/>
+          <include name="Setup"/>
         </methods>
-      </class> <!-- qa.ybl.testcases.TestLogin -->
+      </class> <!-- qa.ybl.testcases.TestUpload -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,18 +1,20 @@
 package qa.ybl.testcases;
 
 import qa.ybl.base.*;
-
+import java.util.Arrays;
 import java.awt.AWTException;
+
+import org.testng.Assert;
 import org.testng.annotations.*;
 import qa.ybl.pages.*;
 import qa.ybl.utility.*;
 
 public class TestUpload extends Base{
 
-	public static String filepath = "E:\\Rakesh\\Automation\\New folder\\Automation\\YBL";
-	public static String datafile = "E:\\Rakesh\\Automation\\New folder\\Automation\\YBL\\uploaddata.xlsx";
-	public static UploadPage up;
-	public static Global global;
+	public  String datafile = prop.getProperty("datafilepath");
+	public String sheetname = prop.getProperty("usheetname");
+	public  UploadPage up;
+	public  Global global;
 	
 	public TestUpload() throws Exception {
 		super();
@@ -23,7 +25,8 @@ public class TestUpload extends Base{
 		Object[][] data = null;
 		try {
 			global = new Global();
-			data = global.Getdata(datafile, "Sheet1");
+			data = global.Getdata(datafile, sheetname);
+			System.out.println(Arrays.deepToString(data));
 			
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -37,14 +40,24 @@ public class TestUpload extends Base{
 	}
 	
 	@Test(dataProvider = "getuploaddata")
-	public void Upload_File(String Menu, String Username,String Password,String Captcha, String filepath, String filename,String res) {
-		 res = null;
+	public void Upload_File(String TSID,String Description, String Username, String Password,String Captcha,String Menu,
+			String Filepath, String Filename,String Expectedresult, String ActualResult) {
+		 String actual = null;
+		 int rowValue = Integer.valueOf(TSID);
 		try {
 			up = new UploadPage();
-			res = up.UploadFile(Menu, Username, Password,Captcha, filepath, filename);
-			System.out.println("Result of the uploaded file is: "+res);
+			actual = up.UploadFile(Menu, Username, Password,Captcha, Filepath, Filename);
+			System.out.println("Result of the uploaded file is: "+actual);
+			String exp = Expectedresult;
 			try {
-				global = new Global();
+				if(actual.contains(Expectedresult)) {
+					global = new Global();
+					global.Writeresult(datafile, sheetname, "PASS "+actual, rowValue);
+					Assert.assertTrue(true);
+				}else {
+					global.Writeresult(datafile, sheetname, "FAIL "+actual, rowValue);
+					Assert.assertTrue(false);
+				}
 			}catch(Exception e) {
 				e.printStackTrace();
 				System.out.println("^^^^^^^^^^-----THIS IS FROM WRITING THE RESULT TO EXCEL-----^^^^^^^^^^");

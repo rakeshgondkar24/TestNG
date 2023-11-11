@@ -16,8 +16,8 @@ public class TestLogin extends Base{
 	public Global global;
 	public String datafile = prop.getProperty("datafilepath");
 	public String sheetname = prop.getProperty("lsheetname");
-	public static String Pdestfile = "E:\\Rakesh\\Automation";
-    public static String Fdestfile = "E:\\Rakesh\\Automation";	
+	public  String Pdestfile = prop.getProperty("passsnapshot");
+    public  String Fdestfile = prop.getProperty("failsnapshot");	
     
 	public TestLogin() throws Exception{
 		super();

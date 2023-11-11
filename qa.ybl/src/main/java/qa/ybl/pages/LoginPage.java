@@ -138,6 +138,7 @@ public class LoginPage extends Base{
 			Username.sendKeys(username);
 			Password.sendKeys(password);
 			Captcha.sendKeys(captcha);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			Loginbtn.click();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			title = driver.getTitle();

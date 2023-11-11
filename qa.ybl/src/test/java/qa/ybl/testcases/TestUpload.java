@@ -15,6 +15,8 @@ public class TestUpload extends Base{
 	public String sheetname = prop.getProperty("usheetname");
 	public  UploadPage up;
 	public  Global global;
+	public  String Pdestfile = prop.getProperty("passsnapshot");
+    public  String Fdestfile = prop.getProperty("failsnapshot");
 	
 	public TestUpload() throws Exception {
 		super();
@@ -53,9 +55,11 @@ public class TestUpload extends Base{
 				if(actual.contains(Expectedresult)) {
 					global = new Global();
 					global.Writeresult(datafile, sheetname, "PASS "+actual, rowValue);
+					global.TakeScreenShot(driver, Pdestfile, TSID);
 					Assert.assertTrue(true);
 				}else {
 					global.Writeresult(datafile, sheetname, "FAIL "+actual, rowValue);
+					global.TakeScreenShot(driver, Fdestfile, TSID);
 					Assert.assertTrue(false);
 				}
 			}catch(Exception e) {

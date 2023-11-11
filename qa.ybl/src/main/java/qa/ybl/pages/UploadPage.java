@@ -23,6 +23,7 @@ public class UploadPage extends Base{
 	public String frame1 = "//*[@id='frame1']";
 	public String frame2 = "//*[@id='IFRAME1']";
 	public  WebDriverWait wait;
+	public  String Fdestfile = prop.getProperty("failsnapshot");
 	
 	@FindBy(xpath = "//*[@id='IFRAME1']")
 	WebElement Frame;
@@ -98,21 +99,27 @@ public class UploadPage extends Base{
 		try {
 			login = new LoginPage();
 			result = login.HomePage(Username, Password,Captcha);
-			try {
-				driver.switchTo().defaultContent();
-				wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame1)));
-				Searchbox.sendKeys(menu);
-				Gobutton.click();
-			}catch(Exception e) {
-				e.printStackTrace();
-				System.out.println("$$$$$$$$$$~~WHILE GETTING INTO UPLOAD TRANSACTION~~$$$$$$$$$$");
-			}
-			try {
-				UploadPage up = new UploadPage();
-				result = up.Upload(filepath, filename);
-			}catch(Exception e) {
-				
+			String loginresul="MainNavigation";
+			if (result.contains(loginresul)) {
+				try {
+					driver.switchTo().defaultContent();
+					wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame1)));
+					Searchbox.sendKeys(menu);
+					Gobutton.click();
+				} catch (Exception e) {
+					e.printStackTrace();
+					System.out.println("$$$$$$$$$$~~WHILE GETTING INTO UPLOAD TRANSACTION~~$$$$$$$$$$");
+				}
+				try {
+					UploadPage up = new UploadPage();
+					result = up.Upload(filepath, filename);
+				} catch (Exception e) {
+
+				} 
+			}else {
+				System.out.println("Upload File method condition Failed taking the snapshot");
+				driver.close();
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -131,6 +138,7 @@ public class UploadPage extends Base{
 			Gobutton.click();
 		}catch(Exception e) {
 			e.printStackTrace();
+			driver.close();
 		}
 	}
 }

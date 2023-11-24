@@ -5,6 +5,8 @@ import java.io.File;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.Augmenter;
 import org.apache.commons.io.FileUtils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,21 +24,26 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import qa.ybl.logging.Logging;
+
 import org.apache.poi.xssf.usermodel.*;
 import org.apache.poi.hssf.usermodel.*;
 
 public class Global {
+	public Logging log;
 	
 	public void TakeScreenShot(WebDriver driver, String Filepath, String name) {
-		
+		log = new Logging();
 		try {
-			TakesScreenshot sc = ((TakesScreenshot) driver);
+			String Snapshot = Filepath+"\\"+"TS_"+name+".png";
+			WebDriver aug = new Augmenter().augment(driver);
+			TakesScreenshot sc = ((TakesScreenshot) aug);
 			File file = sc.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(file,new File(Filepath+"\\"+name+".png"));
-            System.out.println("++++++++++SNAPSHOT IS TAKEN++++++++++");
+            FileUtils.copyFile(file,new File(Snapshot));
+            log.Loginfo("++++++++++SNAPSHOT IS TAKEN++++++++++");
+            log.Loginfo("++++++++++File path and Name is: ++++++++++"+Snapshot);
 		}catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("-----^^^^^-----UNABLE TO TAKE SCREENSHOT IN TakeScreenShot()-----^^^^^-----");
+			log.Logerror("-----^^^^^-----UNABLE TO TAKE SCREENSHOT IN TakeScreenShot()-----^^^^^-----"+"\n"+e);
 		}
 	}
 	
@@ -64,7 +71,8 @@ public class Global {
 	}
 	
 	public void Writeresult(String filepath, String sheetname,String result, int rowValue) {
-		System.out.println("INSIDE THE WRITERESULT");
+		log = new Logging();
+		log.Loginfo("INSIDE THE WRITERESULT");
 		try {
 			File file = new File(filepath);
 			FileInputStream fs = new FileInputStream(file);
@@ -72,12 +80,12 @@ public class Global {
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);
 			XSSFSheet sheet = workbook.getSheet(sheetname);
 //			int rowcount = sheet.getLastRowNum();
-				System.out.println("ROW is: "+rowValue);
+			log.Loginfo("ROW is: "+rowValue);
 				int cellnum = sheet.getRow(rowValue).getLastCellNum();
 				XSSFCell cell = sheet.getRow(rowValue).createCell(cellnum);
 				if(cell.getStringCellValue().isEmpty()) {
-					System.out.println("ROW WHILE WRITING is: "+rowValue);
-					System.out.println("CELL WHILE WRITING is: "+cellnum);
+					log.Loginfo("ROW WHILE WRITING is: "+rowValue);
+					log.Loginfo("CELL WHILE WRITING is: "+cellnum);
 					cell.setCellValue(result);
 				}
 			
@@ -85,7 +93,7 @@ public class Global {
 			workbook.write(fos);
 			fos.close();
 		}catch(Exception e) {
-			e.printStackTrace();
+			log.Logerror("From Writeresult(): "+e);
 		}
 	}
 	
@@ -137,6 +145,14 @@ public class Global {
 			driver.close();
 		}catch(Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	public void Gettabledetails(WebElement element) {
+		try {
+			
+		}catch(Exception e) {
+			
 		}
 	}
 	

@@ -6,9 +6,12 @@ import qa.ybl.base.*;
 import qa.ybl.pages.*;
 import qa.ybl.utility.Global;
 
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -42,6 +45,24 @@ public class UploadPage extends Base{
 	
 	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_lbl_txt']")
 	WebElement Uploadresult;
+	
+	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_txtFromDt']")
+	WebElement FromDate;
+	
+	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_txtToDt']")
+	WebElement ToDate;
+	
+	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_btnSearch']")
+	WebElement Searchbutton;
+	
+	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_grdRecordDetails']")
+	List<WebElement> UploadDetails;
+	
+	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl02_lblbatchid']")
+	WebElement Batchid;
+	
+	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl02_btnDownloadReport']")
+	WebElement Download;
 
 	public UploadPage() throws Exception{
 		super();
@@ -125,6 +146,73 @@ public class UploadPage extends Base{
 			e.printStackTrace();
 		}
 		return result;
+	}
+	
+	public void Getuploaddetails(String result,String Filename) {
+		String exp = "File Upload is in Queue";
+		String batchid = null;
+		try {
+			if(result.contains(exp)) {
+				System.out.println("Result inside Getuploaddetails is: "+result);
+				driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+//				driver.switchTo().defaultContent();
+//				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame2));
+				try {
+					driver.switchTo().defaultContent();
+					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='IFRAME1']")));
+					wait.until(ExpectedConditions.elementToBeClickable(Searchbutton));
+					System.out.println("Is Search button displaying: "+Searchbutton.isDisplayed());
+					System.out.println("Is Search button displaying: "+Searchbutton.isEnabled());
+					JavascriptExecutor executor = (JavascriptExecutor)driver;
+					executor.executeScript("arguments[0].click()", Searchbutton);
+					System.out.println("######Search button is clicked########");
+					try {
+						driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+						driver.switchTo().defaultContent();
+						wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='IFRAME1']")));
+						//wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//*[@id='ctl00_TxnContentPage_grdRecordDetails']")));
+						List<WebElement> elements = UploadDetails;
+						int rowcount = elements.size();
+						System.out.println("Table row count is: "+rowcount);
+						for(int i=0;i<=rowcount;i++) {
+							//System.out.println("Values of WebTables: "+elements.get(i).getText());
+							elements.get(i).getText();
+							if(elements.get(i).getText().equalsIgnoreCase(Filename)) {
+								System.out.println("Values of WebTables: "+elements.get(i).getText());
+								batchid = Batchid.getText();
+								break;
+							}
+						}
+						System.out.println("Batch ID is: "+batchid);
+					}catch(IndexOutOfBoundsException e) {
+						List<WebElement> elements = UploadDetails;
+						int rowcount = elements.size();
+						for(int i=0;i<=rowcount;i++) {
+							elements.get(i).getText();
+							if(elements.get(i).getText().equalsIgnoreCase(Filename)) {
+								System.out.println("Values of WebTables: "+elements.get(i).getText());
+								batchid = Batchid.getText();
+								break;
+							}
+						}
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void ClickSearch() {
+		try {
+			
+		}catch(Exception e) {
+			
+		}
 	}
 	
 	public void Teardown() {

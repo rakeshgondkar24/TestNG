@@ -1,6 +1,7 @@
 package qa.ybl.pages;
 
 import qa.ybl.base.*;
+import qa.ybl.logging.Logging;
 import qa.ybl.utility.Global;
 
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +20,8 @@ public class LoginPage extends Base{
 	public Global global;
 	
 	public static WebDriverWait wait;
+	
+	public Logging log;
 
 	@FindBy(xpath = "//*[@id='txtLogin']")
 	WebElement Username;
@@ -51,6 +54,7 @@ public class LoginPage extends Base{
 	
 	public Boolean UsernameField() {
 		Boolean val,result=false;
+		log = new Logging();
 		try {
 			val = Username.isDisplayed();
 			if(val) {
@@ -138,9 +142,9 @@ public class LoginPage extends Base{
 			Username.sendKeys(username);
 			Password.sendKeys(password);
 			Captcha.sendKeys(captcha);
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			Loginbtn.click();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			title = driver.getTitle();
 			try {
 				String expected="MainNavigation";
@@ -149,16 +153,15 @@ public class LoginPage extends Base{
 				}else if(Apperror.isDisplayed()){
 					title = Apperror.getText();
 				}else {
-					driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 					global = new Global();
 					title = global.Alert(driver);
 				}
 			}catch(Exception e) {
-				e.printStackTrace();
+				log.Logerror("Expected result condition: "+"\n"+e);
 			}
 		}catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("ERROR WHILE TRYING TO LOGIN BY PROVIDING USERNAME & PASSWORD");
+			log.Logerror("ERROR WHILE TRYING TO LOGIN BY PROVIDING USERNAME & PASSWORD"+"\n"+e);
 		}
 		return title;
 	}
@@ -166,7 +169,7 @@ public class LoginPage extends Base{
 	public void Teardown() {
 		try {
 				driver.switchTo().defaultContent();
-				wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+				wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']")));
 				//driver.switchTo().frame(Frame);
 				Searchbox.click();

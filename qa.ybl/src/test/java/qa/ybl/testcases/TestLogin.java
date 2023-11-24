@@ -44,17 +44,16 @@ public class TestLogin extends Base{
 			login = new LoginPage();
 			Boolean username = login.UsernameField();
 			if(username) {
-				global.TakeScreenShot(driver, "Pdestfile", "UsernameField");
+				global.TakeScreenShot(driver, Pdestfile, "UsernameField");
 				Assert.assertTrue(true);
-				driver.close();
+				//driver.close();
 			}else {
-				global.TakeScreenShot(driver, "Fdestfile", "UsernameField");
+				global.TakeScreenShot(driver, Fdestfile, "UsernameField");
 				Assert.assertTrue(false);
-				driver.close();
+				//driver.close();
 			}
 		}catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("!!!!!-----Username_Feild()-----!!!!!");
+			log.Logerror("!!!!!-----Username_Feild()-----!!!!!"+"\n"+e);
 		}
 	}
 	
@@ -65,17 +64,16 @@ public class TestLogin extends Base{
 			global = new Global();
 			Boolean password = login.PasswordField();
 			if(password) {
-				global.TakeScreenShot(driver, "Pdestfile", "PasswordField");
+				global.TakeScreenShot(driver, Pdestfile, "PasswordField");
 				Assert.assertTrue(true);
 				driver.close();
 			}else {
-				global.TakeScreenShot(driver, "Fdestfile", "PasswordField");
+				global.TakeScreenShot(driver, Fdestfile, "PasswordField");
 				Assert.assertTrue(false);
 				driver.close();
 			}
 		}catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("!!!!!-----Password_Feild()-----!!!!!");
+			log.Logerror("!!!!!-----Password_Feild()-----!!!!!"+"\n"+e);
 		}
 	}
 	
@@ -86,17 +84,16 @@ public class TestLogin extends Base{
 			global = new Global();
 			Boolean captcha = login.CaptchaField();
 			if(captcha) {
-				global.TakeScreenShot(driver, "Pdestfile", "CaptchaField");
+				global.TakeScreenShot(driver, Pdestfile, "CaptchaField");
 				Assert.assertTrue(true);
 				driver.close();
 			}else {
-				global.TakeScreenShot(driver, "Fdestfile", "CaptchaField");
+				global.TakeScreenShot(driver, Fdestfile, "CaptchaField");
 				Assert.assertTrue(false);
 				driver.close();
 			}
 		}catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("!!!!!-----Captcha_Feild()-----!!!!!");
+			log.Logerror("!!!!!-----Captcha_Feild()-----!!!!!"+"\n"+e);
 		}
 	}
 	
@@ -107,17 +104,16 @@ public class TestLogin extends Base{
 			Boolean loginbutton = login.LoginbtnField();
 			if(loginbutton) {
 				global = new Global();
-				global.TakeScreenShot(driver, "Pdestfile", "LoginButton");
+				global.TakeScreenShot(driver, Pdestfile, "LoginButton");
 				Assert.assertTrue(true);
 				driver.close();
 			}else {
-				global.TakeScreenShot(driver, "Fdestfile", "LoginButton");
+				global.TakeScreenShot(driver, Fdestfile, "LoginButton");
 				Assert.assertTrue(false);
 				driver.close();
 			}
 		}catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("!!!!!-----Login_Button()-----!!!!!");
+			log.Logerror("!!!!!-----Login_Button()-----!!!!!"+"\n"+e);
 		}
 	}
 	
@@ -130,15 +126,14 @@ public class TestLogin extends Base{
 			System.out.println(rowValue);
 			String actual = login.HomePage(Username, Password, Captcha);
 			String expected = Expected;
-			System.out.println("Expected result is: "+Expected);
+			log.Loginfo("Expected result is: "+Expected);
 			if(actual.contains(expected)) {
 				try {
 					global = new Global();
-					global.TakeScreenShot(driver, "Pdestfile", "HomePage");
+					global.TakeScreenShot(driver, Pdestfile, TSID);
 					global.Writeresult(datafile, sheetname, "PASS"+" "+actual, rowValue);
 				}catch(Exception e) {
-					e.printStackTrace();
-					System.out.println("*****-----UNABLE TO TAKE SNAPSHOT IN LoginPage()-----*****");
+					log.Logerror("*****-----UNABLE TO TAKE SNAPSHOT IN LoginPage()-----*****"+"\n"+e);
 				}
 				login.Teardown();
 				driver.close();
@@ -146,18 +141,17 @@ public class TestLogin extends Base{
 			}else {
 				try {
 					global = new Global();
-					global.TakeScreenShot(driver, "Fdestfile", "HomePage");
+					global.TakeScreenShot(driver, Fdestfile, TSID);
 					global.Writeresult(datafile, sheetname, "FAIL"+" "+actual, rowValue);
 				}catch(Exception e) {
-					e.printStackTrace();
-					System.out.println("*****-----UNABLE TO TAKE SNAPSHOT IN LoginPage()-----*****");
+					log.Logerror("*****-----UNABLE TO TAKE SNAPSHOT IN LoginPage()-----*****"+"\n"+e);
 				}
 				System.out.println("*********************Actual Title of the Home is: "+actual.toUpperCase()+"*********************");
 				driver.close();
 				Assert.assertTrue(false);
 			}
 		}catch(Exception e) {
-			e.printStackTrace();
+			log.Logerror(""+e);
 		}
 	}
 	

@@ -71,6 +71,22 @@ public class TestUpload extends Base{
 		}
 	}
 	
+//	@Test(dataProvider = "getuploaddata")
+//	public void Upload_Files(String TSID,String Description, String Username, String Password,String Captcha,String Menu,
+//			String Filepath, String Filename,String Expectedresult, String ActualResult) {
+//		 String actual = null;
+//		 int rowValue = Integer.valueOf(TSID);
+//		try {
+//			up = new UploadPage();
+//			actual = up.UploadFile(Menu, Username, Password,Captcha, Filepath, Filename);
+//			System.out.println("Result of the uploaded file is: "+actual);
+//            up.Getuploaddetails(actual,Filename);
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+	
+	
 	@AfterMethod
 	public void Teardown() {
 		try {

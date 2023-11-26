@@ -46,11 +46,12 @@ public class TestLogin extends Base{
 			if(username) {
 				global.TakeScreenShot(driver, Pdestfile, "UsernameField");
 				Assert.assertTrue(true);
+				driver.close();
 				//driver.close();
 			}else {
 				global.TakeScreenShot(driver, Fdestfile, "UsernameField");
 				Assert.assertTrue(false);
-				//driver.close();
+				driver.close();
 			}
 		}catch(Exception e) {
 			log.Logerror("!!!!!-----Username_Feild()-----!!!!!"+"\n"+e);
@@ -146,7 +147,7 @@ public class TestLogin extends Base{
 				}catch(Exception e) {
 					log.Logerror("*****-----UNABLE TO TAKE SNAPSHOT IN LoginPage()-----*****"+"\n"+e);
 				}
-				System.out.println("*********************Actual Title of the Home is: "+actual.toUpperCase()+"*********************");
+				log.Logerror("*********************Actual Title of the Home is: "+actual.toUpperCase()+"*********************");
 				driver.close();
 				Assert.assertTrue(false);
 			}

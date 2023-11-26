@@ -3,6 +3,7 @@ package qa.ybl.pages;
 import org.openqa.selenium.support.PageFactory;
 
 import qa.ybl.base.*;
+import qa.ybl.logging.Logging;
 import qa.ybl.pages.*;
 import qa.ybl.utility.Global;
 
@@ -27,6 +28,7 @@ public class UploadPage extends Base{
 	public String frame2 = "//*[@id='IFRAME1']";
 	public  WebDriverWait wait;
 	public  String Fdestfile = prop.getProperty("failsnapshot");
+	public Logging log;
 	
 	@FindBy(xpath = "//*[@id='IFRAME1']")
 	WebElement Frame;
@@ -56,7 +58,13 @@ public class UploadPage extends Base{
 	WebElement Searchbutton;
 	
 	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_grdRecordDetails']")
-	List<WebElement> UploadDetails;
+	WebElement UploadDetails;
+	
+	@FindBy(xpath = "//*[@id=\"ctl00_TxnContentPage_grdRecordDetails\"]/tbody/tr")
+	List<WebElement> UploadDetailsrow;
+	
+	@FindBy(xpath = "//*[@id=\"ctl00_TxnContentPage_grdRecordDetails\"]/tbody/tr[2]/td")
+	List<WebElement> UploadDetailscol;
 	
 	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl02_lblbatchid']")
 	WebElement Batchid;
@@ -71,13 +79,14 @@ public class UploadPage extends Base{
 	
 	public String Upload(String filepath, String filename) {
 		String resultmessage = null;
+		log = new Logging();
 		try {
 			String File = filepath+"\\"+filename;
 			driver.switchTo().defaultContent();
 			wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame2)));
 			try {
-				System.out.println("******SELECTED FILE IS: "+File+"******");
+				log.Loginfo("******SELECTED FILE IS: "+File+"******");
 				Choosefile.sendKeys(File);
 				try {
 					/*driver.switchTo().defaultContent();
@@ -88,8 +97,7 @@ public class UploadPage extends Base{
 					JavascriptExecutor executor = (JavascriptExecutor) driver;
 					executor.executeScript("arguments[0].click();", Submitbutton);
 				}catch(Exception e) {
-					e.printStackTrace();
-					System.out.println("~~~~~WHEN CLICKING THE SUBMIT BUTTON~~~~~");
+					log.Logerror("~~~~~WHEN CLICKING THE SUBMIT BUTTON~~~~~"+"\n"+e);
 				}
 				try {
 					driver.switchTo().defaultContent();
@@ -101,22 +109,20 @@ public class UploadPage extends Base{
 						resultmessage = global.Alert(driver);
 					}
 				}catch(Exception e) {
-					e.printStackTrace();
-					System.out.println("~~~~~WHEN READING THE RESULT MESSAGE~~~~~");
+					log.Logerror("~~~~~WHEN READING THE RESULT MESSAGE~~~~~"+"\n"+e);
 				}
 			}catch(Exception e) {
-				e.printStackTrace();
-				System.out.println("~~~~~~~~~~WHEN UPLOADING THE FILE & SUBMITTING THE FILE~~~~~~~~~~");
+				log.Logerror("~~~~~~~~~~WHEN UPLOADING THE FILE & SUBMITTING THE FILE~~~~~~~~~~"+"\n"+e);
 			}
 		}catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("~~~~~~~WHIE SWITTCHING TO FRAME TO UPLOAD THE FILE~~~~~~~");
+			log.Logerror("~~~~~~~WHIE SWITTCHING TO FRAME TO UPLOAD THE FILE~~~~~~~"+"\n"+e);
 		}
 		return resultmessage;
 	}
 	
 	public String UploadFile(String menu, String Username, String Password,String Captcha, String filepath, String filename) {
 		String result = null;
+		log = new Logging();
 		try {
 			login = new LoginPage();
 			result = login.HomePage(Username, Password,Captcha);
@@ -129,31 +135,33 @@ public class UploadPage extends Base{
 					Searchbox.sendKeys(menu);
 					Gobutton.click();
 				} catch (Exception e) {
-					e.printStackTrace();
-					System.out.println("$$$$$$$$$$~~WHILE GETTING INTO UPLOAD TRANSACTION~~$$$$$$$$$$");
+					log.Logerror("$$$$$$$$$$~~WHILE GETTING INTO UPLOAD TRANSACTION~~$$$$$$$$$$"+"\n"+e);
 				}
 				try {
 					UploadPage up = new UploadPage();
 					result = up.Upload(filepath, filename);
 				} catch (Exception e) {
-
+                        
 				} 
 			}else {
-				System.out.println("Upload File method condition Failed taking the snapshot");
+				log.Logerror("Upload File method condition Failed taking the snapshot");
 				driver.close();
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
+			log.Logerror("UploadFile() method condition Failed"+e);
 		}
 		return result;
 	}
 	
-	public void Getuploaddetails(String result,String Filename) {
+	public String Getuploaddetails(String result,String Filename) {
 		String exp = "File Upload is in Queue";
-		String batchid = null;
+		String batchid = null, btn, file, File, bat = null;
+		log = new Logging();
 		try {
+			log.Loginfo("Result is: "+result);
 			if(result.contains(exp)) {
-				System.out.println("Result inside Getuploaddetails is: "+result);
+				log.Loginfo("Result inside Getuploaddetails is: "+result);
 				driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 //				driver.switchTo().defaultContent();
 //				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame2));
@@ -165,55 +173,69 @@ public class UploadPage extends Base{
 					System.out.println("Is Search button displaying: "+Searchbutton.isEnabled());
 					JavascriptExecutor executor = (JavascriptExecutor)driver;
 					executor.executeScript("arguments[0].click()", Searchbutton);
-					System.out.println("######Search button is clicked########");
+					log.Loginfo("######Search button is clicked########");
 					try {
 						driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 						driver.switchTo().defaultContent();
 						wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='IFRAME1']")));
 						//wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//*[@id='ctl00_TxnContentPage_grdRecordDetails']")));
-						List<WebElement> elements = UploadDetails;
-						int rowcount = elements.size();
+						List<WebElement> rowelements = UploadDetailsrow;
+						List<WebElement> colelements = UploadDetailscol;
+						int rowcount = rowelements.size();
+						int colcount = colelements.size();
 						System.out.println("Table row count is: "+rowcount);
-						for(int i=0;i<=rowcount;i++) {
-							//System.out.println("Values of WebTables: "+elements.get(i).getText());
-							elements.get(i).getText();
-							if(elements.get(i).getText().equalsIgnoreCase(Filename)) {
-								System.out.println("Values of WebTables: "+elements.get(i).getText());
-								batchid = Batchid.getText();
-								break;
+						System.out.println("Table col count is: "+colcount);
+						try {
+							outerloop:
+							for(int i=2;i<=rowcount;i++) {
+								for(int j=1;j<=colcount;j++) {
+									btn = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_btnDownloadReport']"; 
+									file= "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_lblFileName']";
+									bat = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_lblbatchid']";
+									File = driver.findElement(By.xpath(file)).getText();
+									batchid = driver.findElement(By.xpath(bat)).getText();
+									System.out.println("BatchID found is: "+batchid);
+									if(File.equalsIgnoreCase(Filename)) {
+										while(batchid.equalsIgnoreCase("NA")) {
+											executor.executeScript("arguments[0].click()", Searchbutton);
+											driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+											driver.switchTo().defaultContent();
+											wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='IFRAME1']")));
+											//wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//*[@id='ctl00_TxnContentPage_grdRecordDetails']")));
+											File = driver.findElement(By.xpath(file)).getText();
+											batchid = driver.findElement(By.xpath(bat)).getText();
+										}
+										boolean button = driver.findElement(By.xpath(btn)).isEnabled();
+										if(button) {
+											driver.findElement(By.xpath(btn)).click();
+											batchid = batchid+"Record is Fail Please check downloads";
+										}
+										log.Loginfo("Batch ID is: "+batchid);
+										break outerloop;
+									}
+								}
 							}
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							log.Logerror(""+e);
 						}
-						System.out.println("Batch ID is: "+batchid);
 					}catch(IndexOutOfBoundsException e) {
-						List<WebElement> elements = UploadDetails;
-						int rowcount = elements.size();
-						for(int i=0;i<=rowcount;i++) {
-							elements.get(i).getText();
-							if(elements.get(i).getText().equalsIgnoreCase(Filename)) {
-								System.out.println("Values of WebTables: "+elements.get(i).getText());
-								batchid = Batchid.getText();
-								break;
-							}
-						}
+						log.Logerror(""+e);
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					log.Logerror(""+e);
 				}
 				
+			}else {
+				batchid="NA";
 			}
 		}catch(Exception e) {
-			e.printStackTrace();
+			log.Logerror(""+e);
 		}
+		return batchid;
 	}
 	
-	public void ClickSearch() {
-		try {
-			
-		}catch(Exception e) {
-			
-		}
-	}
 	
 	public void Teardown() {
 		try {

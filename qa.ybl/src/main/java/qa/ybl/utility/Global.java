@@ -72,7 +72,7 @@ public class Global {
 	
 	public void Writeresult(String filepath, String sheetname,String result, int rowValue) {
 		log = new Logging();
-		log.Loginfo("INSIDE THE WRITERESULT");
+		//log.Loginfo("INSIDE THE WRITERESULT");
 		try {
 			File file = new File(filepath);
 			FileInputStream fs = new FileInputStream(file);
@@ -80,12 +80,12 @@ public class Global {
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);
 			XSSFSheet sheet = workbook.getSheet(sheetname);
 //			int rowcount = sheet.getLastRowNum();
-			log.Loginfo("ROW is: "+rowValue);
+			//log.Loginfo("ROW is: "+rowValue);
 				int cellnum = sheet.getRow(rowValue).getLastCellNum();
 				XSSFCell cell = sheet.getRow(rowValue).createCell(cellnum);
 				if(cell.getStringCellValue().isEmpty()) {
-					log.Loginfo("ROW WHILE WRITING is: "+rowValue);
-					log.Loginfo("CELL WHILE WRITING is: "+cellnum);
+					//log.Loginfo("ROW WHILE WRITING is: "+rowValue);
+					//log.Loginfo("CELL WHILE WRITING is: "+cellnum);
 					cell.setCellValue(result);
 				}
 			

@@ -1,6 +1,8 @@
 package qa.ybl.testcases;
 
 import qa.ybl.base.*;
+import qa.ybl.logging.Logging;
+
 import java.util.Arrays;
 import java.awt.AWTException;
 
@@ -28,7 +30,8 @@ public class TestUpload extends Base{
 		try {
 			global = new Global();
 			data = global.Getdata(datafile, sheetname);
-			System.out.println(Arrays.deepToString(data));
+			log = new Logging();
+			log.Loginfo(Arrays.deepToString(data));
 			
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -71,20 +74,37 @@ public class TestUpload extends Base{
 		}
 	}
 	
-//	@Test(dataProvider = "getuploaddata")
-//	public void Upload_Files(String TSID,String Description, String Username, String Password,String Captcha,String Menu,
-//			String Filepath, String Filename,String Expectedresult, String ActualResult) {
-//		 String actual = null;
-//		 int rowValue = Integer.valueOf(TSID);
-//		try {
-//			up = new UploadPage();
-//			actual = up.UploadFile(Menu, Username, Password,Captcha, Filepath, Filename);
-//			System.out.println("Result of the uploaded file is: "+actual);
-//            up.Getuploaddetails(actual,Filename);
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
+	@Test(dataProvider = "getuploaddata")
+	public void Upload_Files(String TSID,String Description, String Username, String Password,String Captcha,String Menu,
+			String Filepath, String Filename,String Expectedresult, String ActualResult) {
+		 String actual, batchid = null, res="NA";
+		 int rowValue = Integer.valueOf(TSID);
+		 global = new Global();
+		try {
+			up = new UploadPage();
+			actual = up.UploadFile(Menu, Username, Password,Captcha, Filepath, Filename);
+			if (actual.contains(Expectedresult)) {
+				batchid = up.Getuploaddetails(actual, Filename);
+				if(!batchid.equals(res)) {
+					log.Loginfo("Inside if condition in test");
+					global.Writeresult(datafile, sheetname, "PASS "+actual+"AND Batch ID is: "+batchid, rowValue);
+					global.TakeScreenShot(driver, Pdestfile, TSID);
+					Assert.assertTrue(true);
+				}else {
+					log.Loginfo("Inside else condition in test");
+					global.Writeresult(datafile, sheetname, "PASS "+actual, rowValue);
+					global.TakeScreenShot(driver, Pdestfile, TSID);
+					Assert.assertTrue(true);
+				}
+			}else {
+				global.Writeresult(datafile, sheetname, "FAIL "+actual, rowValue);
+				global.TakeScreenShot(driver, Fdestfile, TSID);
+				Assert.assertTrue(false);
+			}
+		}catch(Exception e) {
+			log.Logerror("FROM Upload_Files Test Case:"+e);
+		}
+	}
 	
 	
 	@AfterMethod

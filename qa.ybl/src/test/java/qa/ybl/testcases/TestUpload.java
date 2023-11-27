@@ -113,7 +113,7 @@ public class TestUpload extends Base{
 			up = new UploadPage();
 			up.Teardown();
 		}catch(Exception e) {
-			e.printStackTrace();
+			log.Logerror("Error in TearDown Method in Test"+e);
 		}
 	}
 }

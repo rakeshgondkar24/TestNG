@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-26T20:22:06 IST" name="Default suite" finished-at="2023-11-26T20:27:47 IST" duration-ms="340379">
+  <suite started-at="2023-11-27T08:57:14 IST" name="Default suite" finished-at="2023-11-27T08:57:30 IST" duration-ms="15987">
     <groups>
     </groups>
-    <test started-at="2023-11-26T20:22:06 IST" name="Default test" finished-at="2023-11-26T20:27:47 IST" duration-ms="340379">
+    <test started-at="2023-11-27T08:57:14 IST" name="Default test" finished-at="2023-11-27T08:57:30 IST" duration-ms="15987">
       <class name="qa.ybl.testcases.TestUpload">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-26T20:22:08 IST" name="Setup" finished-at="2023-11-26T20:22:20 IST" duration-ms="12138" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-27T08:57:15 IST" name="Setup" finished-at="2023-11-27T08:57:22 IST" duration-ms="6550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-26T20:22:20 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-11-26T20:25:26 IST" duration-ms="186357" status="PASS">
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-27T08:57:22 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-11-27T08:57:29 IST" duration-ms="7246" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Upload_Files -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-26T20:25:26 IST" name="Teardown" finished-at="2023-11-26T20:27:47 IST" duration-ms="140781" status="PASS">
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-27T08:57:29 IST" name="Teardown" finished-at="2023-11-27T08:57:30 IST" duration-ms="1114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->

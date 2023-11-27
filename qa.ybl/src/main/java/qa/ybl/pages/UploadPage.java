@@ -169,8 +169,8 @@ public class UploadPage extends Base{
 					driver.switchTo().defaultContent();
 					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='IFRAME1']")));
 					wait.until(ExpectedConditions.elementToBeClickable(Searchbutton));
-					System.out.println("Is Search button displaying: "+Searchbutton.isDisplayed());
-					System.out.println("Is Search button displaying: "+Searchbutton.isEnabled());
+//					System.out.println("Is Search button displaying: "+Searchbutton.isDisplayed());
+//					System.out.println("Is Search button displaying: "+Searchbutton.isEnabled());
 					JavascriptExecutor executor = (JavascriptExecutor)driver;
 					executor.executeScript("arguments[0].click()", Searchbutton);
 					log.Loginfo("######Search button is clicked########");
@@ -183,8 +183,8 @@ public class UploadPage extends Base{
 						List<WebElement> colelements = UploadDetailscol;
 						int rowcount = rowelements.size();
 						int colcount = colelements.size();
-						System.out.println("Table row count is: "+rowcount);
-						System.out.println("Table col count is: "+colcount);
+//						System.out.println("Table row count is: "+rowcount);
+//						System.out.println("Table col count is: "+colcount);
 						try {
 							outerloop:
 							for(int i=2;i<=rowcount;i++) {
@@ -194,7 +194,7 @@ public class UploadPage extends Base{
 									bat = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_lblbatchid']";
 									File = driver.findElement(By.xpath(file)).getText();
 									batchid = driver.findElement(By.xpath(bat)).getText();
-									System.out.println("BatchID found is: "+batchid);
+//									System.out.println("BatchID found is: "+batchid);
 									if(File.equalsIgnoreCase(Filename)) {
 										while(batchid.equalsIgnoreCase("NA")) {
 											executor.executeScript("arguments[0].click()", Searchbutton);
@@ -246,9 +246,13 @@ public class UploadPage extends Base{
 			Searchbox.click();
 			Searchbox.sendKeys("GNLO");
 			Gobutton.click();
-		}catch(Exception e) {
-			e.printStackTrace();
+			log.Loginfo("*****Logged out from Application*****");
 			driver.close();
+			log.Loginfo("*****Successfuly Closed the Browser*****");
+		}catch(Exception e) {
+			log.Logerror("Error While performing Teardown method"+e);
+			driver.close();
+			log.Loginfo("*****Closed the Browser With Error*****");
 		}
 	}
 }

@@ -6,7 +6,7 @@
       <class name="qa.ybl.testcases.TestUpload">
         <methods>
           <include name="Teardown"/>
-          <include name="Upload_Files" invocation-numbers="0"/>
+          <include name="Upload_Files"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- qa.ybl.testcases.TestUpload -->

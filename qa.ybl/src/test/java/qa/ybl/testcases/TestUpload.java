@@ -109,11 +109,12 @@ public class TestUpload extends Base{
 	
 	@AfterMethod
 	public void Teardown() {
+		log = new Logging();
 		try {
 			up = new UploadPage();
 			up.Teardown();
 		}catch(Exception e) {
-			log.Logerror("Error in TearDown Method in Test"+e);
+			log.Logerror("Error in TearDown Method in Test "+e);
 		}
 	}
 }

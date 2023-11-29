@@ -209,6 +209,7 @@ public class UploadPage extends Base{
 										if(button) {
 											driver.findElement(By.xpath(btn)).click();
 											batchid = batchid+"Record is Fail Please check downloads";
+											log.Loginfo(Filename+" Record is Fail Please check downloads");
 										}
 										log.Loginfo("Batch ID is: "+batchid);
 										break outerloop;
@@ -238,6 +239,7 @@ public class UploadPage extends Base{
 	
 	
 	public void Teardown() {
+		log = new Logging();
 		try {
 			driver.switchTo().defaultContent();
 			wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -247,8 +249,8 @@ public class UploadPage extends Base{
 			Searchbox.sendKeys("GNLO");
 			Gobutton.click();
 			log.Loginfo("*****Logged out from Application*****");
-			driver.close();
 			log.Loginfo("*****Successfuly Closed the Browser*****");
+			driver.close();
 		}catch(Exception e) {
 			log.Logerror("Error While performing Teardown method"+e);
 			driver.close();

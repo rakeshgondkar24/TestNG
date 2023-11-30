@@ -45,13 +45,13 @@ public class TestUpload extends Base{
 	}
 	
 	@Test(dataProvider = "getuploaddata")
-	public void Upload_File(String TSID,String Description, String Username, String Password,String Captcha,String Menu,
+	public void Upload_File(String TSID,String Description,String TestFlag, String Username, String Password,String Captcha,String Menu,
 			String Filepath, String Filename,String Expectedresult, String ActualResult) {
 		 String actual = null;
 		 int rowValue = Integer.valueOf(TSID);
 		try {
 			up = new UploadPage();
-			actual = up.UploadFile(Menu, Username, Password,Captcha, Filepath, Filename);
+			actual = up.UploadFile(TestFlag,Menu, Username, Password,Captcha, Filepath, Filename);
 			System.out.println("Result of the uploaded file is: "+actual);
 			String exp = Expectedresult;
 			try {
@@ -75,14 +75,14 @@ public class TestUpload extends Base{
 	}
 	
 	@Test(dataProvider = "getuploaddata")
-	public void Upload_Files(String TSID,String Description, String Username, String Password,String Captcha,String Menu,
+	public void Upload_Files(String TSID,String Description,String TestFlag, String Username, String Password,String Captcha,String Menu,
 			String Filepath, String Filename,String Expectedresult, String ActualResult) {
 		 String actual, batchid = null, res="NA";
 		 int rowValue = Integer.valueOf(TSID);
 		 global = new Global();
 		try {
 			up = new UploadPage();
-			actual = up.UploadFile(Menu, Username, Password,Captcha, Filepath, Filename);
+			actual = up.UploadFile(TestFlag,Menu, Username, Password,Captcha, Filepath, Filename);
 			if (actual.contains(Expectedresult)) {
 				batchid = up.Getuploaddetails(actual, Filename);
 				if(!batchid.equals(res)) {
@@ -109,11 +109,12 @@ public class TestUpload extends Base{
 	
 	@AfterMethod
 	public void Teardown() {
+		log = new Logging();
 		try {
 			up = new UploadPage();
 			up.Teardown();
 		}catch(Exception e) {
-			log.Logerror("Error in TearDown Method in Test"+e);
+			log.Logerror("Error in TearDown Method in Test "+e);
 		}
 	}
 }

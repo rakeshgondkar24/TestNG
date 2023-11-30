@@ -113,6 +113,7 @@ public class UploadPage extends Base{
 				}
 			}catch(Exception e) {
 				log.Logerror("~~~~~~~~~~WHEN UPLOADING THE FILE & SUBMITTING THE FILE~~~~~~~~~~"+"\n"+e);
+				resultmessage="File is not available";
 			}
 		}catch(Exception e) {
 			log.Logerror("~~~~~~~WHIE SWITTCHING TO FRAME TO UPLOAD THE FILE~~~~~~~"+"\n"+e);
@@ -120,36 +121,76 @@ public class UploadPage extends Base{
 		return resultmessage;
 	}
 	
-	public String UploadFile(String menu, String Username, String Password,String Captcha, String filepath, String filename) {
+//	public String UploadFile(String TestFlag,String menu, String Username, String Password,String Captcha, String filepath, String filename) {
+//		String result = null;
+//		log = new Logging();
+//		try {
+//			login = new LoginPage();
+//			result = login.HomePage(Username, Password,Captcha);
+//			String loginresul="MainNavigation";
+//			if (result.contains(loginresul)) {
+//				try {
+//					driver.switchTo().defaultContent();
+//					wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame1)));
+//					Searchbox.sendKeys(menu);
+//					Gobutton.click();
+//				} catch (Exception e) {
+//					log.Logerror("$$$$$$$$$$~~WHILE GETTING INTO UPLOAD TRANSACTION~~$$$$$$$$$$"+"\n"+e);
+//				}
+//				try {
+//					UploadPage up = new UploadPage();
+//					result = up.Upload(filepath, filename);
+//				} catch (Exception e) {
+//                        
+//				} 
+//			}else {
+//				log.Logerror("Upload File method condition Failed taking the snapshot");
+//				driver.close();
+//			}
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//			log.Logerror("UploadFile() method condition Failed"+e);
+//		}
+//		return result;
+//	}
+	
+	public String UploadFile(String TestFlag,String menu, String Username, String Password,String Captcha, String filepath, String filename) {
 		String result = null;
 		log = new Logging();
-		try {
-			login = new LoginPage();
-			result = login.HomePage(Username, Password,Captcha);
-			String loginresul="MainNavigation";
-			if (result.contains(loginresul)) {
-				try {
-					driver.switchTo().defaultContent();
-					wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame1)));
-					Searchbox.sendKeys(menu);
-					Gobutton.click();
-				} catch (Exception e) {
-					log.Logerror("$$$$$$$$$$~~WHILE GETTING INTO UPLOAD TRANSACTION~~$$$$$$$$$$"+"\n"+e);
+		log.Loginfo("Test Flag is: "+TestFlag);
+		if (TestFlag.equalsIgnoreCase("D")) {
+			try {
+				login = new LoginPage();
+				result = login.HomePage(Username, Password, Captcha);
+				String loginresul = "MainNavigation";
+				if (result.contains(loginresul)) {
+					try {
+						driver.switchTo().defaultContent();
+						wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+						wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame1)));
+						Searchbox.sendKeys(menu);
+						Gobutton.click();
+					} catch (Exception e) {
+						log.Logerror("$$$$$$$$$$~~WHILE GETTING INTO UPLOAD TRANSACTION~~$$$$$$$$$$" + "\n" + e);
+					}
+					try {
+						UploadPage up = new UploadPage();
+						result = up.Upload(filepath, filename);
+					} catch (Exception e) {
+
+					}
+				} else {
+					log.Logerror("Upload File method condition Failed taking the snapshot");
+					driver.close();
 				}
-				try {
-					UploadPage up = new UploadPage();
-					result = up.Upload(filepath, filename);
-				} catch (Exception e) {
-                        
-				} 
-			}else {
-				log.Logerror("Upload File method condition Failed taking the snapshot");
-				driver.close();
-			}
-		}catch(Exception e) {
-			e.printStackTrace();
-			log.Logerror("UploadFile() method condition Failed"+e);
+			} catch (Exception e) {
+				e.printStackTrace();
+				log.Logerror("UploadFile() method condition Failed" + e);
+			} 
+		}else {
+			log.Loginfo("Test Skipped");
+			result = "Test Case Skipped";
 		}
 		return result;
 	}
@@ -243,14 +284,19 @@ public class UploadPage extends Base{
 		try {
 			driver.switchTo().defaultContent();
 			wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']")));
-			//driver.switchTo().frame(Frame);
-			Searchbox.click();
-			Searchbox.sendKeys("GNLO");
-			Gobutton.click();
-			log.Loginfo("*****Logged out from Application*****");
-			log.Loginfo("*****Successfuly Closed the Browser*****");
-			driver.close();
+			//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']")));
+			if (wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']"))) != null) {
+				//driver.switchTo().frame(Frame);
+				Searchbox.click();
+				Searchbox.sendKeys("GNLO");
+				Gobutton.click();
+				log.Loginfo("*****Logged out from Application*****");
+				log.Loginfo("*****Successfuly Closed the Browser*****");
+				driver.close();
+			}else if (wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']"))) == null){
+				log.Loginfo("*****Successfuly Closed the Browser*****");
+				driver.close();
+			}
 		}catch(Exception e) {
 			log.Logerror("Error While performing Teardown method"+e);
 			driver.close();

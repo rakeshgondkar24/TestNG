@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="10" passed="0" failed="10" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-30T14:02:45 IST" name="Default suite" finished-at="2023-11-30T14:03:30 IST" duration-ms="45691">
+  <suite started-at="2023-12-01T18:32:57 IST" name="Suite" finished-at="2023-12-01T18:36:21 IST" duration-ms="203962">
     <groups>
     </groups>
-    <test started-at="2023-11-30T14:02:45 IST" name="Default test" finished-at="2023-11-30T14:03:30 IST" duration-ms="45691">
+    <test started-at="2023-12-01T18:32:57 IST" name="Test" finished-at="2023-12-01T18:36:21 IST" duration-ms="203962">
       <class name="qa.ybl.testcases.TestUpload">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-30T14:02:45 IST" name="Setup" finished-at="2023-11-30T14:02:53 IST" duration-ms="7876" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:32:58 IST" name="Setup" finished-at="2023-12-01T18:33:04 IST" duration-ms="6566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-30T14:02:53 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-11-30T14:03:01 IST" duration-ms="7795" status="FAIL">
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:04 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:33:11 IST" duration-ms="6991" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -50,12 +50,12 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files]]>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[CM_octtest_7.xlsx]]>
+                <![CDATA[CM_FILE_demo.xlsx]]>
               </value>
             </param>
             <param index="9">
@@ -77,7 +77,7 @@ at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertTrue(Assert.java:57)
 at org.testng.Assert.assertTrue(Assert.java:67)
-at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:102)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -88,37 +88,24 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Upload_Files -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-30T14:03:01 IST" name="Teardown" finished-at="2023-11-30T14:03:04 IST" duration-ms="2519" status="PASS">
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:11 IST" name="Teardown" finished-at="2023-12-01T18:33:12 IST" duration-ms="1202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-30T14:03:04 IST" name="Setup" finished-at="2023-11-30T14:03:09 IST" duration-ms="5921" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:12 IST" name="Setup" finished-at="2023-12-01T18:33:18 IST" duration-ms="5977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-30T14:03:09 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-11-30T14:03:10 IST" duration-ms="499" status="FAIL">
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:18 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:33:24 IST" duration-ms="5942" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -127,17 +114,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[Verify that application is displaying error message if CM file is already uploaded]]>
+                <![CDATA[Verify that application is uploading GM file sucessfully]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[X]]>
+                <![CDATA[D]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[harishh]]>
+                <![CDATA[harish]]>
               </value>
             </param>
             <param index="4">
@@ -152,22 +139,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="6">
               <value>
-                <![CDATA[UCEN]]>
+                <![CDATA[UGRP]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files]]>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[CM_octtest_2.xlsx]]>
+                <![CDATA[GM_FILE_demo.xlsx]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[Invalid username or password]]>
+                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
               </value>
             </param>
             <param index="10">
@@ -184,7 +171,7 @@ at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertTrue(Assert.java:57)
 at org.testng.Assert.assertTrue(Assert.java:67)
-at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:102)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -195,33 +182,772 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Upload_Files -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@791f145a]" started-at="2023-11-30T14:03:10 IST" name="Teardown" finished-at="2023-11-30T14:03:30 IST" duration-ms="20219" status="PASS">
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:24 IST" name="Teardown" finished-at="2023-12-01T18:33:25 IST" duration-ms="1174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:26 IST" name="Setup" finished-at="2023-12-01T18:33:32 IST" duration-ms="6768" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:32 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:33:50 IST" duration-ms="17558" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify that application is uploading CU file sucessfully]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[UCUS]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[CU_FILE_demo.xlsx]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
+              </value>
+            </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upload_Files -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:50 IST" name="Teardown" finished-at="2023-12-01T18:33:51 IST" duration-ms="1629" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:51 IST" name="Setup" finished-at="2023-12-01T18:33:59 IST" duration-ms="7054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:33:59 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:34:05 IST" duration-ms="6716" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify that application is uploading CE file sucessfully]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[UCCE]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[CE_FILE_demo_4.xlsx]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
+              </value>
+            </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upload_Files -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:34:05 IST" name="Teardown" finished-at="2023-12-01T18:34:06 IST" duration-ms="1008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:34:06 IST" name="Setup" finished-at="2023-12-01T18:34:12 IST" duration-ms="5548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:34:12 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:34:19 IST" duration-ms="7590" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify that application is uploading LM file sucessfully]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ULON]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[LM_FILE_demo.xlsx]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
+              </value>
+            </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upload_Files -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:34:19 IST" name="Teardown" finished-at="2023-12-01T18:34:21 IST" duration-ms="2067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:34:21 IST" name="Setup" finished-at="2023-12-01T18:34:26 IST" duration-ms="4582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:34:26 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:34:51 IST" duration-ms="25380" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[verify that application is uploading LC file successfully]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[LC]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[LC_FILE_demo.xlsx]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
+              </value>
+            </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upload_Files -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:34:51 IST" name="Teardown" finished-at="2023-12-01T18:34:53 IST" duration-ms="1169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:34:53 IST" name="Setup" finished-at="2023-12-01T18:34:58 IST" duration-ms="5916" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:34:58 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:35:14 IST" duration-ms="15738" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify that application is uploading LD file successfully]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ULOD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[LD_FILE_demo.xlsx]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
+              </value>
+            </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upload_Files -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:35:14 IST" name="Teardown" finished-at="2023-12-01T18:35:16 IST" duration-ms="1683" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:35:16 IST" name="Setup" finished-at="2023-12-01T18:35:20 IST" duration-ms="4555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:35:20 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:35:36 IST" duration-ms="16002" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify that application is uploading LR file successfully]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ULOR]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[LR_FILE_demo.xlsx]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
+              </value>
+            </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upload_Files -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:35:36 IST" name="Teardown" finished-at="2023-12-01T18:35:40 IST" duration-ms="3450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:35:40 IST" name="Setup" finished-at="2023-12-01T18:35:46 IST" duration-ms="5881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:35:46 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:36:00 IST" duration-ms="14675" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify that application is uploading DF file successfully]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ULDF]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[DF_FILE_demo.xlsx]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
+              </value>
+            </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upload_Files -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:36:00 IST" name="Teardown" finished-at="2023-12-01T18:36:02 IST" duration-ms="1212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:36:02 IST" name="Setup" finished-at="2023-12-01T18:36:06 IST" duration-ms="4559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:36:06 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-01T18:36:20 IST" duration-ms="13285" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify that application is uploading LP file successfully]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ULOP]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[LP_FILE_demo.xlsx]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
+              </value>
+            </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at qa.ybl.testcases.TestUpload.Upload_Files(TestUpload.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upload_Files -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@7b36aa0c]" started-at="2023-12-01T18:36:20 IST" name="Teardown" finished-at="2023-12-01T18:36:21 IST" duration-ms="1091" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
       </class> <!-- qa.ybl.testcases.TestUpload -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

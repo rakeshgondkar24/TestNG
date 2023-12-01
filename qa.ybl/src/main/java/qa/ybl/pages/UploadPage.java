@@ -197,7 +197,7 @@ public class UploadPage extends Base{
 	
 	public String Getuploaddetails(String result,String Filename) {
 		String exp = "File Upload is in Queue";
-		String batchid = null, btn, file, File, bat = null;
+		String batchid = null, btn, file, File, bat, status, Status = null;
 		log = new Logging();
 		try {
 			log.Loginfo("Result is: "+result);
@@ -233,6 +233,7 @@ public class UploadPage extends Base{
 									btn = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_btnDownloadReport']"; 
 									file= "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_lblFileName']";
 									bat = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_lblbatchid']";
+									status = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_lblStatus']";
 									File = driver.findElement(By.xpath(file)).getText();
 									batchid = driver.findElement(By.xpath(bat)).getText();
 //									System.out.println("BatchID found is: "+batchid);
@@ -245,6 +246,13 @@ public class UploadPage extends Base{
 											//wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//*[@id='ctl00_TxnContentPage_grdRecordDetails']")));
 											File = driver.findElement(By.xpath(file)).getText();
 											batchid = driver.findElement(By.xpath(bat)).getText();
+											Status = driver.findElement(By.xpath(status)).getText();
+											log.Loginfo("Status of File is: "+Status);
+											if(Status.contains("File failed due to parsing errors")) {
+												log.Loginfo("FAIL: "+Status);
+												batchid = "NA"+" File failed due to parsing errors";
+												break;
+											}
 										}
 										boolean button = driver.findElement(By.xpath(btn)).isEnabled();
 										if(button) {

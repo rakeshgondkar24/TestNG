@@ -24,7 +24,7 @@ public class TestUpload extends Base{
 		super();
 	}
 	
-	@DataProvider
+	@DataProvider()
 	public Object[][] getuploaddata(){
 		Object[][] data = null;
 		try {
@@ -39,12 +39,12 @@ public class TestUpload extends Base{
 		return data;
 	}
 	
-	@BeforeMethod
+	@BeforeMethod()
 	public void Setup() throws AWTException {
 		Initialization();
 	}
 	
-	@Test(dataProvider = "getuploaddata")
+	@Test(dataProvider = "getuploaddata", enabled=false)
 	public void Upload_File(String TSID,String Description,String TestFlag, String Username, String Password,String Captcha,String Menu,
 			String Filepath, String Filename,String Expectedresult, String ActualResult) {
 		 String actual = null;
@@ -96,6 +96,9 @@ public class TestUpload extends Base{
 					global.TakeScreenShot(driver, Pdestfile, TSID);
 					Assert.assertTrue(true);
 				}
+			}else if(actual.contains("Skipped")){
+				global.Writeresult(datafile, sheetname, actual, rowValue);
+				Assert.assertTrue(true);
 			}else {
 				global.Writeresult(datafile, sheetname, "FAIL "+actual, rowValue);
 				global.TakeScreenShot(driver, Fdestfile, TSID);

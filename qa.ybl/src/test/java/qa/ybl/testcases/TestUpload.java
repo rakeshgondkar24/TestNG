@@ -24,7 +24,7 @@ public class TestUpload extends Base{
 		super();
 	}
 	
-	@DataProvider()
+	@DataProvider(parallel=true)
 	public Object[][] getuploaddata(){
 		Object[][] data = null;
 		try {
@@ -39,7 +39,7 @@ public class TestUpload extends Base{
 		return data;
 	}
 	
-	@BeforeMethod()
+	@BeforeTest()
 	public void Setup() throws AWTException {
 		Initialization();
 	}
@@ -99,6 +99,7 @@ public class TestUpload extends Base{
 			}else if(actual.contains("Skipped")){
 				global.Writeresult(datafile, sheetname, actual, rowValue);
 				Assert.assertTrue(true);
+				driver.close();
 			}else {
 				global.Writeresult(datafile, sheetname, "FAIL "+actual, rowValue);
 				global.TakeScreenShot(driver, Fdestfile, TSID);
@@ -110,7 +111,7 @@ public class TestUpload extends Base{
 	}
 	
 	
-	@AfterMethod
+	@AfterTest
 	public void Teardown() {
 		log = new Logging();
 		try {

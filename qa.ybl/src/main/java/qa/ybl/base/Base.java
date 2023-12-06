@@ -81,7 +81,7 @@ public class Base {
 		opt.addArguments("--guest");
 		driver = new EdgeDriver(opt);
 		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		log.Loginfo("---------*****LOADING THE YBL APPLICATION*****---------");
 		//System.out.println("---------*****LOADING THE YBL APPLICATION*****---------");
 		driver.get(prop.getProperty("url"));

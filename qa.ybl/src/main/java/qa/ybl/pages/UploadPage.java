@@ -11,12 +11,14 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 import java.time.Duration;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -29,6 +31,7 @@ public class UploadPage extends Base{
 	public  WebDriverWait wait;
 	public  String Fdestfile = prop.getProperty("failsnapshot");
 	public Logging log;
+	public Select sc;
 	
 	@FindBy(xpath = "//*[@id='IFRAME1']")
 	WebElement Frame;
@@ -71,6 +74,18 @@ public class UploadPage extends Base{
 	
 	@FindBy(xpath = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl02_btnDownloadReport']")
 	WebElement Download;
+	
+	@FindBy(xpath = "//*[@id='ddlWorkflowType']")
+	WebElement WorkFlowType;
+	
+	@FindBy(xpath = "//*[@id='btnGetRec']")
+	WebElement WorkFlowSearchButton;
+	
+	@FindBy(xpath = "//*[@id='grdCustomer']/tbody/tr")
+	List<WebElement> ApproveDetailsrow;
+	
+	@FindBy(xpath = "//*[@id='grdCustomer']/tbody/tr/td")
+	List<WebElement> ApproveDetailscol;
 
 	public UploadPage() throws Exception{
 		super();
@@ -197,7 +212,7 @@ public class UploadPage extends Base{
 	
 	public String Getuploaddetails(String result,String Filename) {
 		String exp = "File Upload is in Queue";
-		String batchid = null, btn, file, File, bat = null;
+		String batchid = null, btn, file, File, bat, status, Status = null;
 		log = new Logging();
 		try {
 			log.Loginfo("Result is: "+result);
@@ -233,6 +248,7 @@ public class UploadPage extends Base{
 									btn = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_btnDownloadReport']"; 
 									file= "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_lblFileName']";
 									bat = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_lblbatchid']";
+									status = "//*[@id='ctl00_TxnContentPage_grdRecordDetails_ctl0"+i+"_lblStatus']";
 									File = driver.findElement(By.xpath(file)).getText();
 									batchid = driver.findElement(By.xpath(bat)).getText();
 //									System.out.println("BatchID found is: "+batchid);
@@ -245,6 +261,13 @@ public class UploadPage extends Base{
 											//wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//*[@id='ctl00_TxnContentPage_grdRecordDetails']")));
 											File = driver.findElement(By.xpath(file)).getText();
 											batchid = driver.findElement(By.xpath(bat)).getText();
+											Status = driver.findElement(By.xpath(status)).getText();
+											log.Loginfo("Status of File is: "+Status);
+											if(Status.contains("File failed due to parsing errors")) {
+												log.Loginfo("FAIL: "+Status);
+												batchid = "NA"+" File failed due to parsing errors";
+												break;
+											}
 										}
 										boolean button = driver.findElement(By.xpath(btn)).isEnabled();
 										if(button) {
@@ -278,8 +301,77 @@ public class UploadPage extends Base{
 		return batchid;
 	}
 	
+	public void GetApproveDetails(String Filename,String WorkflowType,String Action) {
+		global = new Global();
+		log = new Logging();
+		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		try {
+			//global.SwitchToFrame(driver, frame2);
+			driver.switchTo().defaultContent();
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame2)));
+			sc =new Select(WorkFlowType);
+			sc.selectByVisibleText(WorkflowType);
+			JavascriptExecutor je = (JavascriptExecutor) driver;
+			je.executeScript("arguments[0].click()", WorkFlowSearchButton);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			outerloop:
+			for(int i =2;i<=ApproveDetailsrow.size();i++) {
+				for(int j=2;j<=ApproveDetailscol.size();j++) {
+					String val = "//*[@id='grdCustomer']/tbody/tr["+i+"]/td["+j+"]";
+					String res = driver.findElement(By.xpath(val)).getText();
+					if(res.equalsIgnoreCase(Filename)) {
+						log.Loginfo("Value of table is: "+res);
+						String bat="//*[@id='grdCustomer_ctl0"+i+"_lnkBtn']";
+						WebElement batchid = driver.findElement(By.xpath(bat));
+						JavascriptExecutor executor = (JavascriptExecutor) driver;
+						executor.executeScript("arguments[0].click()", batchid);
+						global = new Global();
+						
+						break outerloop;
+					}
+				}
+			}
+		}catch(Exception e) {
+			log.Logerror("From GetApproveDetails(): "+"\n"+e);
+		}
+	}
 	
-	public void Teardown() {
+	public String ApproveFile(String TestFlag,String menu, String Username, String Password,String Captcha, String filepath, String filename) {
+		String result=null;
+		log = new Logging();
+		log.Loginfo("Test Flag is:"+TestFlag);
+		if (TestFlag.equalsIgnoreCase("D")) {
+			try {
+				login = new LoginPage();
+				result = login.HomePage(Username, Password, Captcha);
+				String res = "Main";
+				if (result.contains(res)) {
+					try {
+						driver.switchTo().defaultContent();
+						wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+						wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame1)));
+						Searchbox.sendKeys(menu);
+						Gobutton.click();
+					} catch (Exception e) {
+						log.Logerror("$$$$$$$$$$~~WHILE GETTING INTO Inbox TRANSACTION~~$$$$$$$$$$" + "\n" + e);
+					}
+					UploadPage up = new UploadPage();
+					up.GetApproveDetails(filename,"File Upload - Disbursal", "");
+				} else {
+					log.Logerror("Approve File method condition Failed taking the snapshot");
+					driver.close();
+				}
+			} catch (Exception e) {
+				log.Logerror(""+"\n"+e);
+			} 
+		}else {
+			log.Loginfo("Test Skipped");
+			result = "Test Case Skipped";
+		}
+		return result;
+	}
+	
+ 	public void Teardown() {
 		log = new Logging();
 		try {
 			driver.switchTo().defaultContent();

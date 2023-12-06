@@ -21,6 +21,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -128,7 +129,7 @@ public class Global {
 		return message;
 	}
 	
-	public void HandleWindow(WebDriver driver) {
+	public void HandleWindow(WebDriver driver,String Action) {
 		
 		try {
 			Robot r = new Robot();
@@ -139,7 +140,11 @@ public class Global {
 				String Child_window = i.next();
 				if(!Parent_window.equalsIgnoreCase(Child_window)) {
 					driver.switchTo().window(Child_window);
-					r.keyPress(KeyEvent.VK_ENTER);
+					//r.keyPress(KeyEvent.VK_ENTER);
+					switch(Action) {
+					case "approve":
+						
+					}
 				}
 			}
 			driver.close();
@@ -148,12 +153,16 @@ public class Global {
 		}
 	}
 	
-	public void Gettabledetails(WebElement element) {
+	public WebDriver SwitchToFrame(WebDriver driver, String Frame) {
+		WebDriver driver1 = null;
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		try {
-			
+			driver.switchTo().defaultContent();
+			driver1 = wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(Frame)));
 		}catch(Exception e) {
 			
 		}
+		return driver1;
 	}
 	
 //	public void Writeresult(String filepath, String sheetname,String result) {

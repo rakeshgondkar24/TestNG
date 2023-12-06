@@ -128,13 +128,13 @@ public class TestUpload extends Base{
 	
 	@Test(dataProvider = "getapprovaldata")
 	public void ApproveFile(String TSID,String Description,String TestFlag, String Username, String Password,String Captcha,String Menu,
-			String Filepath, String Filename,String Expectedresult, String ActualResult) {
+			String Filepath, String Filename,String Action,String Expectedresult, String ActualResult) {
 		int rownum = Integer.valueOf(TSID);
 		String result=null;
 		log = new Logging();
 		try {
 			up = new UploadPage();
-			result = up.ApproveFile(TestFlag, Menu, Username, Password, Captcha, Filepath, Filename);
+			result = up.ApproveFile(TestFlag, Menu, Username, Password, Captcha, Filepath, Filename,Action);
 			log.Loginfo("ApproveFile Test result is: "+result);
 		}catch (Exception e) {
 			log.Logerror(""+e);

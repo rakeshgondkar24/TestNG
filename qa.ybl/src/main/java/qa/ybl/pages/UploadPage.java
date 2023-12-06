@@ -326,8 +326,13 @@ public class UploadPage extends Base{
 						JavascriptExecutor executor = (JavascriptExecutor) driver;
 						executor.executeScript("arguments[0].click()", batchid);
 						global = new Global();
-						
-						break outerloop;
+						try {
+							log.Loginfo("Action which is selected is: "+Action);
+							global.HandleWindow(driver, Action);
+							break outerloop;
+						} catch (Exception e) {
+							log.Logerror("Handling the new window: "+"\n"+e);
+						}
 					}
 				}
 			}
@@ -336,8 +341,9 @@ public class UploadPage extends Base{
 		}
 	}
 	
-	public String ApproveFile(String TestFlag,String menu, String Username, String Password,String Captcha, String filepath, String filename) {
+	public String ApproveFile(String TestFlag,String menu, String Username, String Password,String Captcha, String filepath, String filename,String Action) {
 		String result=null;
+		Action = Action.toLowerCase();
 		log = new Logging();
 		log.Loginfo("Test Flag is:"+TestFlag);
 		if (TestFlag.equalsIgnoreCase("D")) {
@@ -356,7 +362,7 @@ public class UploadPage extends Base{
 						log.Logerror("$$$$$$$$$$~~WHILE GETTING INTO Inbox TRANSACTION~~$$$$$$$$$$" + "\n" + e);
 					}
 					UploadPage up = new UploadPage();
-					up.GetApproveDetails(filename,"File Upload - Disbursal", "");
+					up.GetApproveDetails(filename,"File Upload - Disbursal",Action);
 				} else {
 					log.Logerror("Approve File method condition Failed taking the snapshot");
 					driver.close();

@@ -130,7 +130,9 @@ public class Global {
 	}
 	
 	public void HandleWindow(WebDriver driver,String Action) {
-		
+		log = new Logging();
+		log.Loginfo("Action which is passed to HandleWindow() is: "+Action);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		try {
 			Robot r = new Robot();
 			String Parent_window = driver.getWindowHandle();
@@ -139,17 +141,61 @@ public class Global {
 			while(i.hasNext()) {
 				String Child_window = i.next();
 				if(!Parent_window.equalsIgnoreCase(Child_window)) {
+					log.Loginfo("Switched to New Window");
 					driver.switchTo().window(Child_window);
 					//r.keyPress(KeyEvent.VK_ENTER);
 					switch(Action) {
+					
 					case "approve":
-						
+						try {
+							WebElement approve = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_rdbARI_0']"));
+							WebElement save = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_btnSave']"));
+							approve.click();
+							log.Loginfo("Approve radio button is clicked");
+							WebElement comment = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='grdFile_ctl02_txtComments']")));
+							comment.clear();
+							log.Loginfo("Comment text box is cleared");
+							comment.sendKeys("Approved");
+							log.Loginfo("Comment text box is entered");
+						}catch(Exception e) {
+							log.Loginfo("While Approving in swith case"+"\n"+e);
+						}
+						break;
+					case "reject":
+						try {
+							WebElement reject = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_rdbARI_1']"));
+							WebElement save = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_btnSave']"));
+							reject.click();
+							log.Loginfo("reject radio button is clicked");
+							WebElement comment = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='grdFile_ctl02_txtComments']")));
+							comment.clear();
+							log.Loginfo("Comment text box is cleared");
+							comment.sendKeys("Rejected");
+							log.Loginfo("Comment text box is entered");
+						}catch(Exception e) {
+							log.Loginfo("While rejecting in swith case"+"\n"+e);
+						}
+						break;
+					case "ignore":
+						try {
+							WebElement ignore = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_rdbARI_2']"));
+							WebElement save = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_btnSave']"));
+							ignore.click();
+							log.Loginfo("ignore radio button is clicked");
+							WebElement comment = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='grdFile_ctl02_txtComments']")));
+							comment.clear();
+							log.Loginfo("Comment text box is cleared");
+							comment.sendKeys("Ignored");
+							log.Loginfo("Comment text box is entered");
+						}catch(Exception e) {
+							log.Loginfo("While Ignoring in swith case"+"\n"+e);
+						}
+						break;
 					}
 				}
 			}
-			driver.close();
 		}catch(Exception e) {
-			e.printStackTrace();
+			log.Logerror("HandleWindow()"+"\n"+e);
 		}
 	}
 	

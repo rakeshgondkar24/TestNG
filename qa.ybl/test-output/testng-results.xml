@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-04T13:59:10 IST" name="Default suite" finished-at="2023-12-04T13:59:49 IST" duration-ms="39067">
+  <suite started-at="2023-12-06T16:15:31 IST" name="Default suite" finished-at="2023-12-06T16:15:54 IST" duration-ms="23269">
     <groups>
     </groups>
-    <test started-at="2023-12-04T13:59:10 IST" name="Default test" finished-at="2023-12-04T13:59:49 IST" duration-ms="39067">
+    <test started-at="2023-12-06T16:15:31 IST" name="Default test" finished-at="2023-12-06T16:15:54 IST" duration-ms="23269">
       <class name="qa.ybl.testcases.TestUpload">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:10 IST" name="Setup" finished-at="2023-12-04T13:59:47 IST" duration-ms="37374" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-06T16:15:31 IST" name="Setup" finished-at="2023-12-06T16:15:40 IST" duration-ms="8967" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="43" status="PASS">
+        <test-method signature="ApproveFile(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-06T16:15:42 IST" name="ApproveFile" data-provider="getapprovaldata" finished-at="2023-12-06T16:15:54 IST" duration-ms="12349" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,7 +20,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Verify that application is uploading CM file sucessfully]]>
+                <![CDATA[abc]]>
               </value>
             </param>
             <param index="2">
@@ -30,12 +30,12 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[harish]]>
+                <![CDATA[sushmaybl]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[ybl@123456]]>
+                <![CDATA[yesbank@123]]>
               </value>
             </param>
             <param index="5">
@@ -45,22 +45,22 @@
             </param>
             <param index="6">
               <value>
-                <![CDATA[UCEN]]>
+                <![CDATA[WFIB]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
+                <![CDATA[abc]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[CM_FILE_demo.xlsx]]>
+                <![CDATA[LD_ NOCPL_309_1010202t63.xlsx]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
+                <![CDATA[abc]]>
               </value>
             </param>
             <param index="10">
@@ -69,542 +69,7 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Verify that application is uploading GM file sucessfully]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[harish]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[ybl@123456]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[testing]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[UGRP]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[GM_FILE_demo.xlsx]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
-              </value>
-            </param>
-            <param index="10">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Verify that application is uploading CU file sucessfully]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[harish]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[ybl@123456]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[testing]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[UCUS]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[CU_FILE_demo.xlsx]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
-              </value>
-            </param>
-            <param index="10">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="14" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Verify that application is uploading CE file sucessfully]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[harish]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[ybl@123456]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[testing]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[UCCE]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[CE_FILE_demo_4.xlsx]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
-              </value>
-            </param>
-            <param index="10">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="18" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Verify that application is uploading LM file sucessfully]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[harish]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[ybl@123456]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[testing]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[ULON]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[LM_FILE_demo.xlsx]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
-              </value>
-            </param>
-            <param index="10">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[6]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[verify that application is uploading LC file successfully]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[harish]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[ybl@123456]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[testing]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[LC]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[LC_FILE_demo.xlsx]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
-              </value>
-            </param>
-            <param index="10">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[7]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Verify that application is uploading LD file successfully]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[harish]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[ybl@123456]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[testing]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[ULOD]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[LD_FILE_demo.xlsx]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
-              </value>
-            </param>
-            <param index="10">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="17" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[8]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Verify that application is uploading LR file successfully]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[harish]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[ybl@123456]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[testing]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[ULOR]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[LR_FILE_demo.xlsx]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
-              </value>
-            </param>
-            <param index="10">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[9]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Verify that application is uploading DF file successfully]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[harish]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[ybl@123456]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[testing]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[ULDF]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[DF_FILE_demo.xlsx]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
-              </value>
-            </param>
-            <param index="10">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method signature="Upload_Files(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Upload_Files" data-provider="getuploaddata" finished-at="2023-12-04T13:59:49 IST" duration-ms="14" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Verify that application is uploading LP file successfully]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[harish]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[ybl@123456]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[testing]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[ULOP]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[E:\Rakesh\Automation\New folder\Automation\YBL\Files\New folder]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[LP_FILE_demo.xlsx]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[File Upload is in Queue. Unique Reference number is]]>
-              </value>
-            </param>
-            <param index="10">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upload_Files -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUpload@6e9175d8]" started-at="2023-12-04T13:59:49 IST" name="Teardown" finished-at="2023-12-04T13:59:49 IST" duration-ms="23" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Teardown -->
+        </test-method> <!-- ApproveFile -->
       </class> <!-- qa.ybl.testcases.TestUpload -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

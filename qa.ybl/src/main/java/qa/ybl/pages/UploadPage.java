@@ -328,7 +328,7 @@ public class UploadPage extends Base{
 						global = new Global();
 						try {
 							log.Loginfo("Action which is selected is: "+Action);
-							global.HandleWindow(driver, Action);
+							global.NewWindow(driver, Action);
 							break outerloop;
 						} catch (Exception e) {
 							log.Logerror("Handling the new window: "+"\n"+e);

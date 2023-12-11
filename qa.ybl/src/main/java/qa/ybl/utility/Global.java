@@ -129,12 +129,11 @@ public class Global {
 		return message;
 	}
 	
-	public void HandleWindow(WebDriver driver,String Action) {
+	public void NewWindow(WebDriver driver,String Action) {
 		log = new Logging();
 		log.Loginfo("Action which is passed to HandleWindow() is: "+Action);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		try {
-			Robot r = new Robot();
 			String Parent_window = driver.getWindowHandle();
 			Set<String> New_window = driver.getWindowHandles();
 			Iterator<String> i = New_window.iterator();
@@ -143,7 +142,6 @@ public class Global {
 				if(!Parent_window.equalsIgnoreCase(Child_window)) {
 					log.Loginfo("Switched to New Window");
 					driver.switchTo().window(Child_window);
-					//r.keyPress(KeyEvent.VK_ENTER);
 					switch(Action) {
 					
 					case "approve":

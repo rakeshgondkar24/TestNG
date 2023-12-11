@@ -32,7 +32,7 @@ public class TestLogin extends Base{
 	}
 	
 	
-	@BeforeMethod
+	@BeforeTest
 	public void setup() throws AWTException {
 		Initialization();
 	}
@@ -137,7 +137,6 @@ public class TestLogin extends Base{
 					log.Logerror("*****-----UNABLE TO TAKE SNAPSHOT IN LoginPage()-----*****"+"\n"+e);
 				}
 				login.Teardown();
-				driver.close();
 				Assert.assertTrue(true);
 			}else {
 				try {
@@ -154,6 +153,11 @@ public class TestLogin extends Base{
 		}catch(Exception e) {
 			log.Logerror(""+e);
 		}
+	}
+	
+	@AfterTest
+	public void quitdriver() {
+		driver.quit();;
 	}
 	
 //	@Test(priority=5, dataProvider="logindetails")

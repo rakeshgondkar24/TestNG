@@ -93,6 +93,7 @@ public class UploadPage extends Base{
 	}
 	
 	public String Upload(String filepath, String filename) {
+		Global gl = new Global();
 		String resultmessage = null;
 		log = new Logging();
 		try {
@@ -109,8 +110,9 @@ public class UploadPage extends Base{
 					wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='ctl00_TxnContentPage_Btn_Submit']")));
 					Submitbutton.click();*/
 					wait.until(ExpectedConditions.elementToBeClickable(Submitbutton));
-					JavascriptExecutor executor = (JavascriptExecutor) driver;
-					executor.executeScript("arguments[0].click();", Submitbutton);
+//					JavascriptExecutor executor = (JavascriptExecutor) driver;
+//					executor.executeScript("arguments[0].click();", Submitbutton);
+					gl.buttonClick(driver, Submitbutton);
 				}catch(Exception e) {
 					log.Logerror("~~~~~WHEN CLICKING THE SUBMIT BUTTON~~~~~"+"\n"+e);
 				}
@@ -211,6 +213,7 @@ public class UploadPage extends Base{
 	}
 	
 	public String Getuploaddetails(String result,String Filename) {
+		Global gl = new Global();
 		String exp = "File Upload is in Queue";
 		String batchid = null, btn, file, File, bat, status, Status = null;
 		log = new Logging();
@@ -227,8 +230,9 @@ public class UploadPage extends Base{
 					wait.until(ExpectedConditions.elementToBeClickable(Searchbutton));
 //					System.out.println("Is Search button displaying: "+Searchbutton.isDisplayed());
 //					System.out.println("Is Search button displaying: "+Searchbutton.isEnabled());
-					JavascriptExecutor executor = (JavascriptExecutor)driver;
-					executor.executeScript("arguments[0].click()", Searchbutton);
+//					JavascriptExecutor executor = (JavascriptExecutor)driver;
+//					executor.executeScript("arguments[0].click()", Searchbutton);
+					gl.buttonClick(driver, Searchbutton);
 					log.Loginfo("######Search button is clicked########");
 					try {
 						driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
@@ -254,7 +258,8 @@ public class UploadPage extends Base{
 //									System.out.println("BatchID found is: "+batchid);
 									if(File.equalsIgnoreCase(Filename)) {
 										while(batchid.equalsIgnoreCase("NA")) {
-											executor.executeScript("arguments[0].click()", Searchbutton);
+//											executor.executeScript("arguments[0].click()", Searchbutton);
+											gl.buttonClick(driver, Searchbutton);
 											driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 											driver.switchTo().defaultContent();
 											wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='IFRAME1']")));
@@ -282,26 +287,27 @@ public class UploadPage extends Base{
 							}
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
-							log.Logerror(""+e);
+							log.Logerror("UploadPage.Getuploaddetails().Outerloop"+"\n"+e);
 						}
 					}catch(IndexOutOfBoundsException e) {
-						log.Logerror(""+e);
+						log.Logerror("UploadPage.Getuploaddetails().TryBlock"+"\n"+e);
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					log.Logerror(""+e);
+					log.Logerror("UploadPage.Getuploaddetails().TryJavaScript"+"\n"+e);
 				}
 				
 			}else {
 				batchid="NA";
 			}
 		}catch(Exception e) {
-			log.Logerror(""+e);
+			log.Logerror("UploadPage.Getuploaddetails()"+"\n"+e);
 		}
 		return batchid;
 	}
 	
-	public void GetApproveDetails(String Filename,String WorkflowType,String Action) {
+	public String GetApproveDetails(String Filename,String WorkflowType,String Action) {
+		String message = null;
 		global = new Global();
 		log = new Logging();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -311,24 +317,25 @@ public class UploadPage extends Base{
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame2)));
 			sc =new Select(WorkFlowType);
 			sc.selectByVisibleText(WorkflowType);
-			JavascriptExecutor je = (JavascriptExecutor) driver;
-			je.executeScript("arguments[0].click()", WorkFlowSearchButton);
+//			JavascriptExecutor je = (JavascriptExecutor) driver;
+//			je.executeScript("arguments[0].click()", WorkFlowSearchButton);
+			global.buttonClick(driver, WorkFlowSearchButton);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 			outerloop:
 			for(int i =2;i<=ApproveDetailsrow.size();i++) {
-				for(int j=2;j<=ApproveDetailscol.size();j++) {
+				for(int j=2;j<=7;j++) {
 					String val = "//*[@id='grdCustomer']/tbody/tr["+i+"]/td["+j+"]";
 					String res = driver.findElement(By.xpath(val)).getText();
 					if(res.equalsIgnoreCase(Filename)) {
 						log.Loginfo("Value of table is: "+res);
 						String bat="//*[@id='grdCustomer_ctl0"+i+"_lnkBtn']";
 						WebElement batchid = driver.findElement(By.xpath(bat));
-						JavascriptExecutor executor = (JavascriptExecutor) driver;
-						executor.executeScript("arguments[0].click()", batchid);
-						global = new Global();
+//						JavascriptExecutor executor = (JavascriptExecutor) driver;
+//						executor.executeScript("arguments[0].click()", batchid);
+						global.buttonClick(driver, batchid);
 						try {
 							log.Loginfo("Action which is selected is: "+Action);
-							global.NewWindow(driver, Action);
+							message = global.NewWindow(driver, Action);
 							break outerloop;
 						} catch (Exception e) {
 							log.Logerror("Handling the new window: "+"\n"+e);
@@ -337,11 +344,12 @@ public class UploadPage extends Base{
 				}
 			}
 		}catch(Exception e) {
-			log.Logerror("From GetApproveDetails(): "+"\n"+e);
+			log.Logerror("UploadPage.GetApproveDetails(): "+"\n"+e);
 		}
+		return message;
 	}
 	
-	public String ApproveFile(String TestFlag,String menu, String Username, String Password,String Captcha, String filepath, String filename,String Action) {
+	public String ApproveFile(String TestFlag,String menu, String Username, String Password,String Captcha, String filename,String Action) {
 		String result=null;
 		Action = Action.toLowerCase();
 		log = new Logging();
@@ -362,13 +370,13 @@ public class UploadPage extends Base{
 						log.Logerror("$$$$$$$$$$~~WHILE GETTING INTO Inbox TRANSACTION~~$$$$$$$$$$" + "\n" + e);
 					}
 					UploadPage up = new UploadPage();
-					up.GetApproveDetails(filename,"File Upload - Disbursal",Action);
+					result = up.GetApproveDetails(filename,"File Upload - Disbursal",Action);
 				} else {
 					log.Logerror("Approve File method condition Failed taking the snapshot");
 					driver.close();
 				}
 			} catch (Exception e) {
-				log.Logerror(""+"\n"+e);
+				log.Logerror("UploadPage.ApproveFile()"+"\n"+e);
 			} 
 		}else {
 			log.Loginfo("Test Skipped");
@@ -396,7 +404,7 @@ public class UploadPage extends Base{
 				driver.close();
 			}
 		}catch(Exception e) {
-			log.Logerror("Error While performing Teardown method"+e);
+			log.Logerror("UploadPage.Teardown()"+"\n"+e);
 			driver.close();
 			log.Loginfo("*****Closed the Browser With Error*****");
 		}

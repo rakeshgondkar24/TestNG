@@ -22,6 +22,7 @@ import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -44,11 +45,12 @@ public class Global {
             log.Loginfo("++++++++++SNAPSHOT IS TAKEN++++++++++");
             log.Loginfo("++++++++++File path and Name is: ++++++++++"+Snapshot);
 		}catch(Exception e) {
-			log.Logerror("-----^^^^^-----UNABLE TO TAKE SCREENSHOT IN TakeScreenShot()-----^^^^^-----"+"\n"+e);
+			log.Logerror("Global.TakeScreenShot(WebDriver driver, String Filepath, String name)"+"\n"+e);
 		}
 	}
 	
 	public Object[][] Getdata(String filepath,String sheetname) {
+		log = new Logging();
 		Object[][] data = null;
 		try {
 			File file = new File(filepath);
@@ -66,7 +68,7 @@ public class Global {
 			wb.close();
 			fs.close();
 		}catch(Exception e) {
-			e.printStackTrace();
+			log.Logerror("Global.Getdata(String filepath,String sheetname)"+"\n"+e);
 		}
 		return data;
 	}
@@ -94,44 +96,47 @@ public class Global {
 			workbook.write(fos);
 			fos.close();
 		}catch(Exception e) {
-			log.Logerror("From Writeresult(): "+e);
+			log.Logerror("Global.Writeresult(String filepath, String sheetname,String result, int rowValue)"+"\n"+e);
 		}
 	}
 	
 	public String Alert(WebDriver driver) {
+		log = new Logging();
 		String message= null;
 		try {
-			System.out.println("Inside the Alert Method");
-//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//			driver.switchTo().defaultContent();
-//			Alert al = wait.until(ExpectedConditions.alertIsPresent());
-//			driver.switchTo().alert();
-//			message = driver.switchTo().alert().getText();
-//			al.accept();
-//			System.out.println("Alert message is: "+message);
-//			driver.close();
+			log.Loginfo("Inside the Alert Method");
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			//driver.switchTo().defaultContent();
+			wait.until(ExpectedConditions.alertIsPresent());
+			Alert al = driver.switchTo().alert();
+			message = al.getText();
+			al.accept();
+			log.Loginfo("Alert message is: "+message);
+			driver.close();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}catch(Exception e) {
-			System.out.println("Inside the Alert Method Exception");
+			log.Loginfo("Global.Alert(WebDriver driver)"+"\n"+e);
 			try {
 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-				driver.switchTo().defaultContent();
+				//driver.switchTo().defaultContent();
 				Alert al = wait.until(ExpectedConditions.alertIsPresent());
 				driver.switchTo().alert();
 				message = driver.switchTo().alert().getText();
 				al.accept();
-				System.out.println("Alert message is: "+message);
+				log.Loginfo("\n"+"Alert message is: "+message);
 				driver.close();
 			}catch(Exception f) {
-				f.printStackTrace();
+				log.Logerror("Global.Alert(WebDriver driver).catch()"+"\n"+f);
 			}
 		}
 		return message;
 	}
 	
-	public void NewWindow(WebDriver driver,String Action) {
+	public String NewWindow(WebDriver driver,String Action) {
+		String message = null;
 		log = new Logging();
-		log.Loginfo("Action which is passed to HandleWindow() is: "+Action);
+		log.Loginfo("Action which is passed to NewWindow() is: "+Action);
+		Global gl= new Global();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		try {
 			String Parent_window = driver.getWindowHandle();
@@ -142,12 +147,12 @@ public class Global {
 				if(!Parent_window.equalsIgnoreCase(Child_window)) {
 					log.Loginfo("Switched to New Window");
 					driver.switchTo().window(Child_window);
+					driver.manage().window().maximize();
 					switch(Action) {
 					
 					case "approve":
 						try {
 							WebElement approve = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_rdbARI_0']"));
-							WebElement save = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_btnSave']"));
 							approve.click();
 							log.Loginfo("Approve radio button is clicked");
 							WebElement comment = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='grdFile_ctl02_txtComments']")));
@@ -155,14 +160,17 @@ public class Global {
 							log.Loginfo("Comment text box is cleared");
 							comment.sendKeys("Approved");
 							log.Loginfo("Comment text box is entered");
+							WebElement save = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='grdFile_ctl02_btnSave']")));
+							gl.buttonClick(driver, save);
+							message = gl.Alert(driver);
 						}catch(Exception e) {
 							log.Loginfo("While Approving in swith case"+"\n"+e);
 						}
+						driver.switchTo().window(Parent_window);
 						break;
 					case "reject":
 						try {
 							WebElement reject = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_rdbARI_1']"));
-							WebElement save = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_btnSave']"));
 							reject.click();
 							log.Loginfo("reject radio button is clicked");
 							WebElement comment = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='grdFile_ctl02_txtComments']")));
@@ -170,14 +178,17 @@ public class Global {
 							log.Loginfo("Comment text box is cleared");
 							comment.sendKeys("Rejected");
 							log.Loginfo("Comment text box is entered");
+							WebElement save = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='grdFile_ctl02_btnSave']")));
+							gl.buttonClick(driver, save);
+							message = gl.Alert(driver);
 						}catch(Exception e) {
 							log.Loginfo("While rejecting in swith case"+"\n"+e);
 						}
+						driver.switchTo().window(Parent_window);
 						break;
 					case "ignore":
 						try {
 							WebElement ignore = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_rdbARI_2']"));
-							WebElement save = driver.findElement(By.xpath("//*[@id='grdFile_ctl02_btnSave']"));
 							ignore.click();
 							log.Loginfo("ignore radio button is clicked");
 							WebElement comment = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='grdFile_ctl02_txtComments']")));
@@ -185,16 +196,21 @@ public class Global {
 							log.Loginfo("Comment text box is cleared");
 							comment.sendKeys("Ignored");
 							log.Loginfo("Comment text box is entered");
+							WebElement save = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='grdFile_ctl02_btnSave']")));
+							gl.buttonClick(driver, save);
+							message = gl.Alert(driver);
 						}catch(Exception e) {
 							log.Loginfo("While Ignoring in swith case"+"\n"+e);
 						}
+						driver.switchTo().window(Parent_window);
 						break;
 					}
 				}
 			}
 		}catch(Exception e) {
-			log.Logerror("HandleWindow()"+"\n"+e);
+			log.Logerror("Global.NewWindow(WebDriver driver,String Action)"+"\n"+e);
 		}
+		return message;
 	}
 	
 	public WebDriver SwitchToFrame(WebDriver driver, String Frame) {
@@ -207,6 +223,16 @@ public class Global {
 			
 		}
 		return driver1;
+	}
+	
+	public void buttonClick(WebDriver driver, WebElement element) {
+		log = new Logging();
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click()", element);
+		}catch(Exception e) {
+			log.Logerror("Global.buttonClick(WebDriver driver, WebElement element)"+"\n"+e);
+		}
 	}
 	
 //	public void Writeresult(String filepath, String sheetname,String result) {

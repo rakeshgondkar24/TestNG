@@ -101,6 +101,7 @@ public class Global {
 	}
 	
 	public String Alert(WebDriver driver) {
+		Global gl = new Global();
 		log = new Logging();
 		String message= null;
 		try {

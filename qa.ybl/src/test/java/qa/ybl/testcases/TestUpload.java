@@ -129,27 +129,35 @@ public class TestUpload extends Base{
 	@Test(dataProvider = "getapprovaldata")
 	public void ApproveFile(String TSID,String Description,String TestFlag, String Username, String Password,String Captcha,String Menu,
 		 String Filename,String Action,String Expectedresult, String ActualResult) {
+		global = new Global();
 		int rownum = Integer.valueOf(TSID);
 		String result=null;
 		log = new Logging();
 		try {
 			up = new UploadPage();
 			result = up.ApproveFile(TestFlag, Menu, Username, Password, Captcha, Filename,Action);
-			log.Loginfo("ApproveFile Test result is: "+result);
+			String res = "approved";
+			result = result.toLowerCase();
+			if(result.contains(res)) {
+				global.Writeresult(datafile, asheetname, result, rownum);
+				Assert.assertTrue(true);
+			}else {
+				global.Writeresult(datafile, asheetname, result, rownum);
+				Assert.assertTrue(false);
+			}
 		}catch (Exception e) {
-			log.Logerror(""+e);
+			log.Logerror("TestUpload.ApproveFile()"+"\n"+e);
 		}
 	}
 	
-	
-//	@AfterTest
-//	public void Teardown() {
-//		log = new Logging();
-//		try {
-//			up = new UploadPage();
-//			up.Teardown();
-//		}catch(Exception e) {
-//			log.Logerror("Error in TearDown Method in Test "+e);
-//		}
-//	}
+	@AfterTest
+	public void Teardown() {
+		log = new Logging();
+		try {
+			up = new UploadPage();
+			up.Teardown();
+		}catch(Exception e) {
+			log.Logerror("Error in TearDown Method in Test "+e);
+		}
+	}
 }

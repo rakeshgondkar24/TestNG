@@ -139,10 +139,10 @@ public class TestUpload extends Base{
 			String res = "approved";
 			result = result.toLowerCase();
 			if(result.contains(res)) {
-				global.Writeresult(datafile, asheetname, result, rownum);
+				global.Writeresult(datafile, asheetname, "Pass "+result, rownum);
 				Assert.assertTrue(true);
 			}else {
-				global.Writeresult(datafile, asheetname, result, rownum);
+				global.Writeresult(datafile, asheetname, "Fail "+result, rownum);
 				Assert.assertTrue(false);
 			}
 		}catch (Exception e) {

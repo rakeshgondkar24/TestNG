@@ -231,6 +231,7 @@ public class Global {
 		try {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].click()", element);
+//			driver.manage().timeouts().implicitlyWait(10, Duration.ofSeconds(10));
 		}catch(Exception e) {
 			log.Logerror("Global.buttonClick(WebDriver driver, WebElement element)"+"\n"+e);
 		}

@@ -138,12 +138,20 @@ public class LoginPage extends Base{
 	
 	public String HomePage(String username, String password,String captcha) {
 		String title = null;
+		Username.clear();
+		Password.clear();
+		Captcha.clear();
 		try {
 			Username.sendKeys(username);
 			Password.sendKeys(password);
-			Captcha.sendKeys(captcha);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			Loginbtn.click();
+			if (captcha!=null) {
+				Captcha.sendKeys(captcha);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				Loginbtn.click();
+			}else {
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				Loginbtn.click();
+			}
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			title = driver.getTitle();
 			try {
@@ -168,15 +176,18 @@ public class LoginPage extends Base{
 	
 	public void Teardown() {
 		try {
+				log = new Logging();
 				driver.switchTo().defaultContent();
 				wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//				WebElement fr = (WebElement) wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']")));
+//				log.Loginfo("LoginPage().Teardown().Frame is"+"\n"+fr);
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']")));
 				//driver.switchTo().frame(Frame);
 				Searchbox.click();
 				Searchbox.sendKeys("GNLO");
 				Gobutton.click();
 		}catch(Exception e) {
-			e.printStackTrace();
+			log.Logerror("LoginPage().Teardown()"+"\n"+e);
 		}
 	}
 }

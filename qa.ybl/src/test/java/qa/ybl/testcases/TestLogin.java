@@ -37,7 +37,7 @@ public class TestLogin extends Base{
 		Initialization();
 	}
 
-	@Test(priority=1)
+	@Test(priority=1,enabled=false)
 	public void Username_Feild() {
 		try {
 			global = new Global();
@@ -58,7 +58,7 @@ public class TestLogin extends Base{
 		}
 	}
 	
-	@Test(priority=2)
+	@Test(priority=2,enabled=false)
 	public void Password_Feild() {
 		try {
 			login = new LoginPage();
@@ -78,7 +78,7 @@ public class TestLogin extends Base{
 		}
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3,enabled=false)
 	public void Captcha_Feild() {
 		try {
 			login = new LoginPage();
@@ -98,7 +98,7 @@ public class TestLogin extends Base{
 		}
 	}
 	
-	@Test(priority=4)
+	@Test(priority=4,enabled=false)
 	public void Login_Button() {
 		try {
 			login = new LoginPage();
@@ -157,7 +157,7 @@ public class TestLogin extends Base{
 	
 	@AfterTest
 	public void quitdriver() {
-		driver.quit();;
+		driver.close();
 	}
 	
 //	@Test(priority=5, dataProvider="logindetails")

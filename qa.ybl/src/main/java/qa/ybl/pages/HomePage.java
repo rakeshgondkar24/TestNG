@@ -28,11 +28,26 @@ public class HomePage extends Base{
 		PageFactory.initElements(driver, this);
 	}
 	
+	public void GetintoTransaction(String UImenu, WebElement frame) {
+		try {
+			driver.switchTo().defaultContent();
+			wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame)));
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
+			Searchbox.click();
+			Searchbox.sendKeys(UImenu);
+			Gobutton.click();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void GetintoTransaction(String UImenu, String frame) {
 		try {
 			driver.switchTo().defaultContent();
 			wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame)));
+//			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(frame)));
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
 			Searchbox.click();
 			Searchbox.sendKeys(UImenu);
 			Gobutton.click();

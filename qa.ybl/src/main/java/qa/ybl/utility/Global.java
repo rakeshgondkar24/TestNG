@@ -25,7 +25,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.interactions.Actions;
 import qa.ybl.logging.Logging;
 
 import org.apache.poi.xssf.usermodel.*;
@@ -98,6 +99,21 @@ public class Global {
 		}catch(Exception e) {
 			log.Logerror("Global.Writeresult(String filepath, String sheetname,String result, int rowValue)"+"\n"+e);
 		}
+	}
+	
+	public String handlePopUp(WebDriver driver) {
+		String text = null;
+		log = new Logging();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		try {
+			wait.until(ExpectedConditions.alertIsPresent());
+			Alert al = driver.switchTo().alert();
+			text = al.getText();
+			al.accept();
+		}catch(Exception e) {
+			log.Logerror("Global.handlePopUp()"+"\n"+e);
+		}
+		return text;
 	}
 	
 	public String Alert(WebDriver driver) {
@@ -214,14 +230,15 @@ public class Global {
 		return message;
 	}
 	
-	public WebDriver SwitchToFrame(WebDriver driver, String Frame) {
+	public WebDriver SwitchToFrame(WebDriver driver, WebElement Frame) {
+		log = new Logging();
 		WebDriver driver1 = null;
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		try {
 			driver.switchTo().defaultContent();
-			driver1 = wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(Frame)));
+			driver1 = wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(Frame));
 		}catch(Exception e) {
-			
+			log.Logerror("Global.SwitchToFrame()"+"\n"+e);
 		}
 		return driver1;
 	}
@@ -236,6 +253,7 @@ public class Global {
 			log.Logerror("Global.buttonClick(WebDriver driver, WebElement element)"+"\n"+e);
 		}
 	}
+	
 	
 //	public void Writeresult(String filepath, String sheetname,String result) {
 //		System.out.println("INSIDE THE WRITERESULT");
@@ -267,4 +285,25 @@ public class Global {
 //			e.printStackTrace();
 //		}
 //	}
+	
+	public void selectDropdownValue(WebElement element, String text) {
+		log = new Logging();
+		try {
+			Select dropdown = new Select(element);
+			dropdown.selectByVisibleText(text);
+			log.Loginfo("Selected the Drop Down Value");
+		} catch (Exception e) {
+//			((JavascriptExecutor)driver).executeAsyncScript("arguments[0].scrollIntoView(true);", element);
+			log.Logerror("Global.selectDropdownValue(WebElement element, String text)"+"\n"+e);
+		}
+	}
+	public void doubleClick(WebDriver driver, WebElement element) {
+		try {
+			Actions act = new Actions(driver);
+			act.doubleClick(element).build().perform();
+		} catch (Exception e) {
+			log.Logerror("Global.doubleClick(Driver driver, WebElement element)"+"\n"+e);
+		}
+	}
+	
 }

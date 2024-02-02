@@ -6,7 +6,8 @@
       <class name="qa.ybl.testcases.TestUserCreation">
         <methods>
           <include name="setup"/>
-          <include name="testCreateUser"/>
+          <include name="testCreateUser" invocation-numbers="0 1 2 3 4"/>
+          <include name="Teardown"/>
         </methods>
       </class> <!-- qa.ybl.testcases.TestUserCreation -->
     </classes>

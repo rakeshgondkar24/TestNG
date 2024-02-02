@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="49" passed="49" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-01T17:52:08 IST" name="Default suite" finished-at="2024-02-01T17:52:48 IST" duration-ms="40672">
+  <suite started-at="2024-02-02T16:35:05 IST" name="Default suite" finished-at="2024-02-02T16:52:06 IST" duration-ms="1020741">
     <groups>
     </groups>
-    <test started-at="2024-02-01T17:52:08 IST" name="Default test" finished-at="2024-02-01T17:52:48 IST" duration-ms="40672">
+    <test started-at="2024-02-02T16:35:05 IST" name="Default test" finished-at="2024-02-02T16:52:06 IST" duration-ms="1020741">
       <class name="qa.ybl.testcases.TestUserCreation">
-        <test-method is-config="true" signature="setup()[pri:0, instance:qa.ybl.testcases.TestUserCreation@6d4d66d2]" started-at="2024-02-01T17:52:08 IST" name="setup" finished-at="2024-02-01T17:52:12 IST" duration-ms="4888" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:35:05 IST" name="setup" finished-at="2024-02-02T16:35:11 IST" duration-ms="5381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6d4d66d2]" started-at="2024-02-01T17:52:13 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-01T17:52:48 IST" duration-ms="34757" status="PASS">
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:35:12 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:35:41 IST" duration-ms="29532" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[1234]]>
+                <![CDATA[2224001]]>
               </value>
             </param>
             <param index="11">
@@ -75,12 +75,12 @@
             </param>
             <param index="12">
               <value>
-                <![CDATA[nisarga]]>
+                <![CDATA[AlejandraBianco]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[nisarga]]>
+                <![CDATA[AlejandraBianco]]>
               </value>
             </param>
             <param index="14">
@@ -100,7 +100,7 @@
             </param>
             <param index="17">
               <value>
-                <![CDATA[Pass]]>
+                <![CDATA[Record Saved]]>
               </value>
             </param>
             <param index="18">
@@ -110,6 +110,4762 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:35:41 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:36:08 IST" duration-ms="27015" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224002]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[ChanceFarrington]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[ChanceFarrington]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:36:08 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:36:41 IST" duration-ms="32302" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224003]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[AndyFerris]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[AndyFerris]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:36:41 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:37:00 IST" duration-ms="19492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224004]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[AltonMagee]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[AltonMagee]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:37:00 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:37:15 IST" duration-ms="14583" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224005]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[NellyGooch]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[NellyGooch]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:37:15 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:37:55 IST" duration-ms="40041" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224006]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[SemajValerio]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[SemajValerio]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:37:55 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:38:14 IST" duration-ms="19202" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224007]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[CelinaAlvarado]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[CelinaAlvarado]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:38:14 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:38:49 IST" duration-ms="35405" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224008]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[AryanaTorrez]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[AryanaTorrez]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:38:49 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:39:01 IST" duration-ms="11401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224009]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[CaliDexter]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[CaliDexter]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:39:01 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:39:14 IST" duration-ms="13451" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224010]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Clyde Milam]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Clyde Milam]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:39:14 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:39:57 IST" duration-ms="42578" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224011]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Nathaniel Horst]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Nathaniel Horst]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:39:57 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:40:30 IST" duration-ms="33748" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224012]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Rhett Keefe]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Rhett Keefe]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:40:30 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:41:00 IST" duration-ms="29363" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[13]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224013]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Katelin Sarmiento]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Katelin Sarmiento]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:41:00 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:41:11 IST" duration-ms="10885" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224014]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Garret Fisk]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Garret Fisk]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:41:11 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:41:30 IST" duration-ms="18988" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224015]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Reece Stubblefield]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Reece Stubblefield]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:41:30 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:42:04 IST" duration-ms="34657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[16]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224016]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Treyvon Casillas]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Treyvon Casillas]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:42:04 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:42:15 IST" duration-ms="10723" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224017]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Yasmine Hamel]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Yasmine Hamel]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:42:15 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:42:43 IST" duration-ms="27464" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[18]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224018]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Abram Huynh]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Abram Huynh]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:42:43 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:43:03 IST" duration-ms="20611" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[19]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224019]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Drew Avery]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Drew Avery]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:43:03 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:43:13 IST" duration-ms="10328" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224020]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Mason Doll]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Mason Doll]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:43:13 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:43:40 IST" duration-ms="26884" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[21]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224021]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Odalys Rand]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Odalys Rand]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:43:40 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:43:51 IST" duration-ms="10765" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[22]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224022]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Kent Good]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Kent Good]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:43:51 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:44:01 IST" duration-ms="9677" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224023]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Elijah Slagle]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Elijah Slagle]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:44:01 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:44:12 IST" duration-ms="11537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[24]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224024]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Derick Herron]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Derick Herron]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:44:12 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:44:36 IST" duration-ms="23760" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[25]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224025]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Santino Pollack]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Santino Pollack]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:44:36 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:45:06 IST" duration-ms="29493" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[26]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224026]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Wesley Watt]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Wesley Watt]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:45:06 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:45:14 IST" duration-ms="8698" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[27]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224027]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Breonna Persaud]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Breonna Persaud]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:45:14 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:45:34 IST" duration-ms="19868" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[28]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224028]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Grace Gustafson]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Grace Gustafson]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:45:34 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:45:55 IST" duration-ms="20513" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[29]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[BELGALPET]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224029]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Travon Grabowski]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Travon Grabowski]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:45:55 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:46:10 IST" duration-ms="15622" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224030]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Sarahi Antonio]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Sarahi Antonio]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:46:10 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:46:33 IST" duration-ms="22980" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[31]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224031]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Dashaun Tripp]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Dashaun Tripp]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:46:33 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:46:51 IST" duration-ms="17284" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[32]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224032]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Gerardo Gamboa]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Gerardo Gamboa]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:46:51 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:47:06 IST" duration-ms="14998" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[33]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224033]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Kory Leone]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Kory Leone]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:47:06 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:47:14 IST" duration-ms="8500" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[34]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224034]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Glen Aviles]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Glen Aviles]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:47:14 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:47:44 IST" duration-ms="29561" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[35]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224035]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Bruce Bunn]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Bruce Bunn]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:47:44 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:47:59 IST" duration-ms="14923" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[36]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224036]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Darnell Hamrick]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Darnell Hamrick]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:47:59 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:48:07 IST" duration-ms="8793" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[37]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224037]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Tabatha Dominguez]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Tabatha Dominguez]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:48:07 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:48:20 IST" duration-ms="12711" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[38]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224038]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Dyllan Estes]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Dyllan Estes]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:48:20 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:48:51 IST" duration-ms="30747" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[39]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224039]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Zoie Messina]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Zoie Messina]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:48:51 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:49:09 IST" duration-ms="18153" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[40]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224040]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Mauricio Song]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Mauricio Song]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:49:09 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:49:23 IST" duration-ms="13530" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[41]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224041]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Kaitlynn Goble]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Kaitlynn Goble]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:49:23 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:49:51 IST" duration-ms="28819" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[42]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224042]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Gracie Vega]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Gracie Vega]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:49:51 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:50:01 IST" duration-ms="9488" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[43]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224043]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Kyleigh Ling]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Kyleigh Ling]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:50:01 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:50:14 IST" duration-ms="13621" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[44]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224044]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Bridgett Frias]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Bridgett Frias]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:50:14 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:50:30 IST" duration-ms="15618" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[45]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224045]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Savion Colburn]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Savion Colburn]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:50:30 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:50:55 IST" duration-ms="24677" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[46]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224046]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Selena Hankins]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Selena Hankins]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:50:55 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:51:08 IST" duration-ms="13360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[47]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224047]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Trever Harper]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Trever Harper]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:51:08 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:51:19 IST" duration-ms="10967" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[48]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224048]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Mollie Lugo]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Mollie Lugo]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testCreateUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:51:19 IST" name="testCreateUser" data-provider="getUserCreationData" finished-at="2024-02-02T16:51:56 IST" duration-ms="36652" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[49]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[D]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[harish]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ybl@123456]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ADUD]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[YES_BANK]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Perambur]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2224049]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Mr]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Darrien Barclay]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Darrien Barclay]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Atyati@123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[ACTIVE]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Record Saved]]>
+              </value>
+            </param>
+            <param index="18">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:qa.ybl.testcases.TestUserCreation@6892b3b6]" started-at="2024-02-02T16:51:56 IST" name="Teardown" finished-at="2024-02-02T16:52:06 IST" duration-ms="10249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
       </class> <!-- qa.ybl.testcases.TestUserCreation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

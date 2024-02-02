@@ -76,7 +76,7 @@ public class Global {
 	
 	public void Writeresult(String filepath, String sheetname,String result, int rowValue) {
 		log = new Logging();
-		//log.Loginfo("INSIDE THE WRITERESULT");
+		log.Loginfo("INSIDE THE WRITERESULT");
 		try {
 			File file = new File(filepath);
 			FileInputStream fs = new FileInputStream(file);
@@ -86,11 +86,13 @@ public class Global {
 //			int rowcount = sheet.getLastRowNum();
 			//log.Loginfo("ROW is: "+rowValue);
 				int cellnum = sheet.getRow(rowValue).getLastCellNum();
+				log.Loginfo("Last Cell Num is: "+cellnum);
 				XSSFCell cell = sheet.getRow(rowValue).createCell(cellnum);
 				if(cell.getStringCellValue().isEmpty()) {
 					//log.Loginfo("ROW WHILE WRITING is: "+rowValue);
 					//log.Loginfo("CELL WHILE WRITING is: "+cellnum);
 					cell.setCellValue(result);
+					log.Loginfo("Updated the Result to a file");
 				}
 			
 			FileOutputStream fos = new FileOutputStream(filepath);
@@ -129,7 +131,6 @@ public class Global {
 			message = al.getText();
 			al.accept();
 			log.Loginfo("Alert message is: "+message);
-			driver.close();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}catch(Exception e) {
 			log.Loginfo("Global.Alert(WebDriver driver)"+"\n"+e);
@@ -141,7 +142,6 @@ public class Global {
 				message = driver.switchTo().alert().getText();
 				al.accept();
 				log.Loginfo("\n"+"Alert message is: "+message);
-				driver.close();
 			}catch(Exception f) {
 				log.Logerror("Global.Alert(WebDriver driver).catch()"+"\n"+f);
 			}

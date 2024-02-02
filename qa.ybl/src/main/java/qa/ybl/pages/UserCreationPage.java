@@ -22,11 +22,16 @@ public class UserCreationPage extends Base{
 	protected WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 	@FindBy(xpath = "//*[@id='frame1']")
-	private WebElement Frame;
+	public WebElement Frame;
 	
 	@FindBy(xpath = "//*[@id='IFRAME1']")
 	private WebElement frame;
 	
+	@FindBy(xpath = "//*[@id='WebUserControl1_SearchText']")
+	WebElement Searchbox;
+	
+	@FindBy(xpath = "//*[@id='Button1']")
+	WebElement Gobutton;
 	
 	@FindBy(xpath = "//*[contains(text(), 'General Details')]")
 	private WebElement generalDetails;
@@ -85,7 +90,8 @@ public class UserCreationPage extends Base{
 		log = new Logging();
 		boolean res = false;
 		try {
-			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
+			driver.switchTo().defaultContent();
+//			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
 			res = frame.isDisplayed();
 			if(res) {
 				res = frame.isEnabled();
@@ -460,18 +466,22 @@ public class UserCreationPage extends Base{
 		log = new Logging();
 		gl = new Global();
 		try {
-//			uc = new UserCreationPage();
-//			if(uc.isFrameDisplayed()) {
-//				driver = gl.SwitchToFrame(driver, frame);
-//				newButton.click();
-//				text = gl.handlePopUp(driver);
-//			}else {
-//				log.Loginfo("Frame is not available in User Creation Page");
-//			}
-			driver.switchTo().defaultContent();
-            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='IFRAME1']")));
-            newButton.click();
-            text = gl.handlePopUp(driver);
+			uc = new UserCreationPage();
+			boolean cond = uc.isFrameDisplayed();
+			log.Loginfo("frame is displayed: "+cond);
+			if(uc.isFrameDisplayed()) {
+				driver = gl.SwitchToFrame(driver, frame);
+				newButton.click();
+				text = gl.handlePopUp(driver);
+				log.Loginfo("Text of a usercreation pop up is: "+cond);
+			}else {
+				log.Loginfo("Frame is not available in User Creation Page");
+			}
+			
+//			driver.switchTo().defaultContent();
+//            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='IFRAME1']")));
+//            newButton.click();
+//            text = gl.handlePopUp(driver);
 //			driver.switchTo().frame(driver.findElement(By.xpath("//*[@id='IFRAME1")));
 			}catch(Exception e) {
 			log.Logerror("UserCreationPage.getIntoUserCreationPage()"+"\n"+e);
@@ -617,21 +627,63 @@ public class UserCreationPage extends Base{
 		}
 	}
 	
-	protected String getIntoCreationPage(String Menu,String Username,String lPassword,String Captcha) {
+	protected String getIntoHomePage(String Username,String lPassword,String Captcha) {
 		String actual = null;
 		log = new Logging();
 		try {
 			login = new LoginPage();
 			String res = "Main";
 			actual = login.HomePage(Username, lPassword, Captcha);
-			if(actual.contains(res)) {
-				home = new HomePage();
-				home.GetintoTransaction(Menu, Frame);
-			}
+//			if(actual.contains(res)) {
+//				home = new HomePage();
+//				home.GetintoTransaction(Menu, Frame);
+//			}
 		}catch(Exception e) {
 			log.Logerror("UserCreationPage.getIntoCreationPage()"+"\n"+e);
 		}
 		return actual;
+	}
+	
+	private String submit(String Action) {
+		log = new Logging();
+		gl = new Global();
+		String result = null;;
+		try {
+			switch(Action) {
+			case "All":
+				try {
+					saveButton.click();
+					result = gl.handlePopUp(driver);
+				}catch(Exception e) {
+					log.Logerror("UserCreationPage.submit().switch(All)"+"\n"+e);
+				}
+				break;
+			case "BC Agent":
+				try {
+					
+				}catch(Exception e) {
+					log.Logerror("UserCreationPage.submit().switch(BC Agent)"+"\n"+e);
+				}
+				break;
+			case "BC BranchManager":
+				try {
+					
+				}catch(Exception e) {
+					log.Logerror("UserCreationPage.submit().switch(BC BranchManager)"+"\n"+e);
+				}
+				break;
+			case "BC HO":
+				try {
+					
+				}catch(Exception e) {
+					log.Logerror("UserCreationPage.submit().switch(BC HO)"+"\n"+e);
+				}
+				break;
+			}
+		}catch(Exception e) {
+			log.Logerror("UserCreationPage.submit()"+"\n"+e);
+		}
+		return result;
 	}
 	
 	public String createUser(String Menu,String TestFlag,String Username,String lPassword,String Captcha,String Profile,String Entity1,String Entity2,String OperatorCode,String Title,
@@ -643,9 +695,11 @@ public class UserCreationPage extends Base{
 			try {
 				uc = new UserCreationPage();
 				String res = "Main";
-				result = uc.getIntoCreationPage(Menu, Username, lPassword, Captcha);
+				result = uc.getIntoHomePage(Username, lPassword, Captcha);
 				log.Loginfo("Result after login is: "+result);
 				if (result.contains(res)) {
+					home = new HomePage();
+					home.GetintoTransaction(Menu, Frame);
 					uc.getIntoUserCreationPage();
 					uc.clickProfileAttached();
 					uc.selectProfile(Profile);
@@ -658,6 +712,8 @@ public class UserCreationPage extends Base{
 					uc.enterPassword(Password);
 					uc.enterConfirmPassword(ConfirmPassword);
 					uc.selectStatus(Status);
+					result = uc.submit(Profile);
+					log.Loginfo("Result after save is: "+result);
 				}
 			} catch (Exception e) {
 				log.Logerror("UserCreationPage.createUser()" + "\n" + e);
@@ -666,5 +722,25 @@ public class UserCreationPage extends Base{
 			result = "Test Skipped";
 		}
 		return result;
+	}
+	
+	
+	public void Teardown() {
+		try {
+			log = new Logging();
+			log.Loginfo("Inside the TearDown Method");
+			driver.switchTo().defaultContent();
+			wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//			WebElement fr = (WebElement) wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']")));
+//			log.Loginfo("LoginPage().Teardown().Frame is"+"\n"+fr);
+//			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='frame1']")));
+			driver.switchTo().frame(Frame);
+			Searchbox.click();
+			Searchbox.sendKeys("GNLO");
+			Gobutton.click();
+//			driver.close();
+		}catch(Exception e) {
+			log.Logerror("LoginPage().Teardown()"+"\n"+e);
+		}
 	}
 }
